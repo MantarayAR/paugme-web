@@ -1,0 +1,12 @@
+// Measures
+//
+// Styleguide 1.3
+
+$measure-guide: 3px;
+
+$measure-thin:   1 * $measure-guide; // 3px
+$measure-normal: 2 * $measure-guide; // 6px
+$measure-large:  3 * $measure-guide; // 9px
+$measure-xlarge: 10 * $measure-guide; // 30px;
+
+$border-radius: $measure-guide;

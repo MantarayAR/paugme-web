@@ -1,0 +1,25 @@
+// Columns
+//
+// Styleguide 3
+
+$column-gutter-width: 3%;
+$column-base-width:   5.58%;
+.row {
+  @include clearfix;
+}
+
+.column {
+  float: left;
+
+  & + & {
+    margin-left: $column-gutter-width;
+  }
+}
+
+.one-third {
+  width: (4 * $column-base-width + 3 * $column-gutter-width);
+}
+
+.two-thirds {
+  width: (8 * $column-base-width + 7 * $column-gutter-width);
+}

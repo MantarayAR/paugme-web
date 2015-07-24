@@ -1,0 +1,166 @@
+// Scaffolding
+//
+//
+// Styleguide 2
+
+* {
+  box-sizing: border-box;
+}
+
+// Paragraphs
+//
+// <p>Paragraph example</p>
+// <p class="inverse">Inverse paragraph</p>
+// <p>Consecutive paragraphs get margin</p>
+//
+// .inverse - flip the text color to black
+//
+// Styleguide 2.1
+p {
+  color: $color-black;
+  font-family: $font-sans-alternative;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-feather;
+  line-height: $line-height-medium;
+
+  &.inverse {
+    color: $color-white;
+  }
+}
+
+p + p {
+  margin-top: (2 * $measure-large);
+}
+
+// Headings
+//
+//
+// Styleguide 2.2
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  color: $color-white;
+  font-family: $font-sans-serif;
+  font-weight: $font-weight-medium;
+}
+
+h1,
+.h1 {
+  font-size: $font-size-xxlarge;
+  font-weight: $font-weight-light;
+  line-height: $line-height-xxlarge;
+
+  @media(max-width: $screen-xs-max) {
+    font-size: $font-size-xlarge;
+    line-height: $line-height-xlarge;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $font-size-xlarge;
+  font-weight: $font-weight-light;
+  line-height: $line-height-xlarge;
+
+  @media(max-width: $screen-xs-max) {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+}
+
+h3,
+.h3 {
+  font-family: $font-sans-alternative;
+  font-size: $font-size-large;
+  font-weight: $font-weight-feather;
+  line-height: $line-height-large;
+
+  @media(max-width: $screen-xs-max) {
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+  }
+}
+
+h4,
+.h4 {
+  font-family: $font-sans-alternative;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-feather;
+  line-height: $line-height-medium;
+
+  @media(max-width: $screen-xs-max) {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+  }
+}
+
+// Blockquotes
+//
+// Blockquotes can be used to pull out a very inspirational
+// quote. Remember to cite your source!
+//
+// <blockquote>
+//   <p>This is an inspirational quote!</p>
+//   <cite>Someone</cite>
+// </blockquote
+//
+// Styleguide 2.3
+blockquote {
+  &,
+  & p {
+    font-family: $font-sans-serif;
+    font-size: $font-size-large;
+    font-weight: $font-weight-heavy;
+    line-height: $line-height-xxlarge;
+  }
+}
+
+cite {
+  &,
+  & p {
+    color: $color-tundora;
+    font-size: $font-size-medium;
+  }
+}
+
+// Lists
+//
+// Unordered lists are a great way of listing data.
+//
+//
+// .inverse - flip the text color to white;\
+//
+// Styleguide 2.4
+ul, ol {
+  color: $color-black;
+  font-family: $font-sans-serif;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-light;
+  line-height: $line-height-medium;
+
+  &.inverse {
+    color: $color-white;
+  }
+
+  &.pills {
+    float: left;
+
+    & + & {
+      list-style: none;
+      margin-left:(2 * $measure-large);
+    }
+  }
+}
+
+// Images
+//
+// Styleguide 2.5
+.img-responsive {
+  max-height: auto;
+  width: 100%;
+}

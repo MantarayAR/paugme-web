@@ -1,0 +1,18 @@
+// Responsive Width
+//
+// No styleguide reference
+@mixin responsive-width($large, $medium, $small, $xsmall) {
+  width: $large;
+
+  @media(max-width: $screen-md-max) {
+    width: $medium;
+  }
+
+  @media(max-width: $screen-sm-max) {
+    width: $small;
+  }
+
+  @media(max-width: $screen-xs-max) {
+    width: $xsmall;
+  }
+}

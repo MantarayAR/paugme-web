@@ -1,0 +1,108 @@
+// Home
+//
+// Styleguide 3.1
+.home {
+
+}
+
+.home__welcome {
+  background-image: url(/images/iphone-blurred.jpg);
+  background-size: cover;
+  height: 90vh;
+  position: relative
+}
+
+.home__welcome_card {
+  background-color: rgba( $color-mine-shaft, .3 );
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+}
+
+.home__welcome_panel {
+  bottom: 0;
+  left: 0;
+  max-height: 90vh;
+  padding: 20vh $measure-xlarge;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+
+  * {
+    text-align: center;
+  }
+
+  h1 {
+    border-bottom: $measure-thin solid $color-white;
+    display: inline-block;
+    margin-bottom: 5vh;
+  }
+
+  h2 {
+    margin-bottom: 5vh;
+  }
+
+  h3 {
+    margin-bottom: 5vh;
+  }
+}
+
+.home__about {
+  background-color: $color-yellow;
+  padding: $measure-xlarge;
+  text-align: center;
+
+  blockquote {
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-feather;
+  }
+
+  cite {
+    display: block;
+    margin-top: $measure-xlarge;
+  }
+}
+
+.home__packages {
+  background-color: $color-mine-shaft;
+  padding: 10vh $measure-xlarge;
+  text-align: center;
+
+  p {
+    @extend p.inverse;
+
+    font-size: $font-size-xlarge;
+    line-height: $line-height-xlarge;
+  }
+}
+
+.home__packages_pack {
+  @include clearfix;
+  @include responsive-width(50%, 60%, 80%, 90%);
+
+  background-color: $color-lochmara;
+  border-radius: $border-radius;
+  padding: $measure-large;
+  margin: $measure-xlarge auto;
+  text-align: left;
+
+  img {
+    margin-right: $measure-xlarge;
+  }
+
+
+  p {
+    font-size: $font-size-large;
+  }
+
+  ul {
+    @extend ul.inverse;
+
+    li {
+      @extend ul.pills;
+    }
+  }
+}

@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+p {
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.44; }
+  p.inverse, .home__packages p {
+    color: #fff; }
+
+p + p {
+  margin-top: 18px; }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
+
+h1,
+.h1 {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.6; }
+  @media (max-width: 767px) {
+    h1,
+    .h1 {
+      font-size: 32px;
+      line-height: 1.6; } }
+
+h2,
+.h2 {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.6; }
+  @media (max-width: 767px) {
+    h2,
+    .h2 {
+      font-size: 24px;
+      line-height: 1.44; } }
+
+h3,
+.h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.44; }
+  @media (max-width: 767px) {
+    h3,
+    .h3 {
+      font-size: 16px;
+      line-height: 1.44; } }
+
+h4,
+.h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.44; }
+  @media (max-width: 767px) {
+    h4,
+    .h4 {
+      font-size: 14px;
+      line-height: 1.44; } }
+
+blockquote,
+blockquote p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.6; }
+
+cite,
+cite p {
+  color: #444;
+  font-size: 16px; }
+
+ul, ol {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.44; }
+  ul.inverse, .home__packages_pack ul, ol.inverse {
+    color: #fff; }
+  ul.pills, .home__packages_pack ul li, ol.pills {
+    float: left; }
+    ul.pills + ul.pills, .home__packages_pack ul li + ul.pills, .home__packages_pack ul ul.pills + li, .home__packages_pack ul li + li, ol.pills + ol.pills {
+      list-style: none;
+      margin-left: 18px; }
+
+.img-responsive {
+  max-height: auto;
+  width: 100%; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.column {
+  float: left; }
+  .column + .column {
+    margin-left: 3%; }
+
+.one-third {
+  width: 31.32%; }
+
+.two-thirds {
+  width: 65.64%; }
+
+.button {
+  background-color: #0288d1;
+  border: 1px solid #0288d1;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.44;
+  padding: 6px;
+  transition: all 0.1s; }
+  .button:hover,
+  .button:active,
+  .button.active {
+    background-color: #0278b8;
+    border-color: #0278b8; }
+
+a.button {
+  text-decoration: none; }
+
+.button-large {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.44;
+  padding: 18px 27px; }
+
+.home__welcome {
+  background-image: url(/images/iphone-blurred.jpg);
+  background-size: cover;
+  height: 90vh;
+  position: relative; }
+
+.home__welcome_card {
+  background-color: rgba(34, 34, 34, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0; }
+
+.home__welcome_panel {
+  bottom: 0;
+  left: 0;
+  max-height: 90vh;
+  padding: 20vh 30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0; }
+  .home__welcome_panel * {
+    text-align: center; }
+  .home__welcome_panel h1 {
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    margin-bottom: 5vh; }
+  .home__welcome_panel h2 {
+    margin-bottom: 5vh; }
+  .home__welcome_panel h3 {
+    margin-bottom: 5vh; }
+
+.home__about {
+  background-color: #fc0;
+  padding: 30px;
+  text-align: center; }
+  .home__about blockquote {
+    font-size: 32px;
+    font-weight: 100; }
+  .home__about cite {
+    display: block;
+    margin-top: 30px; }
+
+.home__packages {
+  background-color: #222;
+  padding: 10vh 30px;
+  text-align: center; }
+  .home__packages p {
+    font-size: 32px;
+    line-height: 1.6; }
+
+.home__packages_pack {
+  width: 50%;
+  background-color: #0288d1;
+  border-radius: 3px;
+  padding: 9px;
+  margin: 30px auto;
+  text-align: left; }
+  .home__packages_pack:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 1199px) {
+    .home__packages_pack {
+      width: 60%; } }
+  @media (max-width: 991px) {
+    .home__packages_pack {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    .home__packages_pack {
+      width: 90%; } }
+  .home__packages_pack img {
+    margin-right: 30px; }
+  .home__packages_pack p {
+    font-size: 24px; }
