@@ -2,24 +2,34 @@
 //
 // Styleguide 3
 
-$column-gutter-width: 3%;
-$column-base-width:   5.58%;
-.row {
+$number_of_columns: 12;
+$number_of_gutters: $number_of_columns - 1;
+$gutter_space: 3%;
+$column_space: (100 - $gutter_space * $number_of_gutters) / $number_of_columns;
+
+.row,
+.row-fluid {
   @include clearfix;
 }
 
-.column {
+.row-same-height {
+  display: table;
+  width: 100%;
+}
+
+[class^="column"],
+[class*=" column"] {
   float: left;
 
   & + & {
-    margin-left: $column-gutter-width;
+    margin-left: $gutter-space;
+  }
+
+  &.push {
+    float: right;
   }
 }
 
-.one-third {
-  width: (4 * $column-base-width + 3 * $column-gutter-width);
-}
-
-.two-thirds {
-  width: (8 * $column-base-width + 7 * $column-gutter-width);
-}
+@include column('.one-third', .33);
+@include column('.two-thirds', .66);
+@include column('.one-half', .5);

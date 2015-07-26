@@ -32,6 +32,7 @@
   top: 0;
 
   * {
+    @extend .inverse;
     text-align: center;
   }
 
@@ -52,7 +53,7 @@
 
 .home__about {
   background-color: $color-yellow;
-  padding: $measure-xlarge;
+  padding: 6vh;
   text-align: center;
 
   blockquote {
@@ -67,13 +68,13 @@
 }
 
 .home__packages {
-  background-color: $color-mine-shaft;
+  background-color: $color-gallery;
+  background-image: url(/images/temp-abstract-background-white.png);
+  background-size: cover;
   padding: 10vh $measure-xlarge;
   text-align: center;
 
   p {
-    @extend p.inverse;
-
     font-size: $font-size-xlarge;
     line-height: $line-height-xlarge;
   }
@@ -83,8 +84,9 @@
   @include clearfix;
   @include responsive-width(50%, 60%, 80%, 90%);
 
-  background-color: $color-lochmara;
-  border-radius: $border-radius;
+  background-color: rgba($color-yellow, .8);
+  border-radius: 0;
+  box-shadow: 3px 2px 4px rgba(100,100,100,0.8);
   padding: $measure-large;
   margin: $measure-xlarge auto;
   text-align: left;
@@ -93,16 +95,103 @@
     margin-right: $measure-xlarge;
   }
 
-
   p {
     font-size: $font-size-large;
   }
 
   ul {
-    @extend ul.inverse;
+    @extend ul;
 
     li {
       @extend ul.pills;
     }
   }
 }
+
+.home__signup {
+  @extend .text-center;
+
+  background-color: $color-lochmara;
+  padding: 6vh;
+}
+
+.home__circuits {
+  @extend .text-center;
+
+  background-color: $color-mine-shaft;
+  padding: 6vh;
+
+  h2 {
+    @extend .inverse;
+
+    font-size: $font-size-xlarge;
+  }
+}
+
+.home__circuit {
+  @include clearfix;
+  @include responsive-width(50%, 60%, 80%, 90%);
+
+  margin: $measure-xlarge auto;
+
+  [class^="column"],
+  [class*=" column"] {
+    text-align: center;
+    vertical-align: middle !important;
+  }
+}
+
+.home__circuit_light,
+.home__circuit_circuit,
+.home__circuit_mobile {
+  float: left;
+
+  .fa {
+    font-size: 200px;
+    color: $color-gallery;
+
+    transition: all 0.2s;
+
+    &.on {
+      color: $color-yellow;
+      text-shadow: 0 0 18px rgba($color-yellow, .5);
+    }
+  }
+}
+
+.home__circuit_light_text,
+.home__circuit_circuit_text,
+.home__circuit_mobile_text {
+  float: right;
+
+  p {
+    @extend .inverse;
+
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+}
+
+.home__biology {
+  @extend .text-center;
+
+  background-color: $color-lochmara;
+  padding: 6vh;
+
+  h2 {
+    font-size: $font-size-xlarge;
+  }
+
+  .row {
+    @include responsive-width(50%, 60%, 80%, 50%);
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+

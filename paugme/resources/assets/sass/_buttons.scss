@@ -32,9 +32,28 @@ a.button {
   text-decoration: none;
 }
 
+.button-yellow {
+  color: $color-text-on-yellow;
+  background-color: $color-yellow;
+
+  &:hover,
+  &:active,
+  &.active {
+    background-color: darken($color-yellow, 2%);
+    border-color: darken($color-yellow, 2%);
+  }
+}
+
 .button-large {
   font-size: $font-size-large;
   font-weight: $font-weight-light;
   line-height: $line-height-large;
   padding: (2 * $measure-large) (3 * $measure-large);
+}
+
+.button-xlarge {
+  font-size: $font-size-large;
+  font-weight: $font-weight-light;
+  line-height: $line-height-large;
+  padding: (4 * $measure-large) (6 * $measure-large);
 }

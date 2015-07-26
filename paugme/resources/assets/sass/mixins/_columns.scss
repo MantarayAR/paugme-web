@@ -1,0 +1,69 @@
+@mixin same-height() {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+};
+
+@mixin column( $name, $percentage_width ) {
+  $stretch_columns: $number_of_columns * $percentage_width;
+  $stretch_gutters: $stretch_columns - 1;
+
+  [class^="column"]#{$name},
+  [class*=" column"]#{$name} {
+    width: ( $stretch_columns * $column_space ) + ( $stretch_gutters * $gutter_space );
+  }
+
+  @media(max-width: $screen-md-max) {
+    .column-md#{$name} {
+      .row & {
+        width: 100%;
+      }
+
+      & + .column-md#{$name} {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media(min-width: $screen-lg-min) {
+    .row-same-height .column-md#{$name} {
+      @include same-height;
+    }
+  }
+
+  @media(max-width: $screen-sm-max) {
+    .column-sm#{$name} {
+      .row & {
+        width: 100%;
+      }
+
+      & + .column-sm#{$name} {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media(min-width: $screen-md-min) {
+    .row-same-height .column-sm#{$name} {
+      @include same-height;
+    }
+  }
+
+  @media(max-width: $screen-xs-max) {
+    .column-xs#{$name} {
+      .row & {
+        width: 100%;
+
+        & + .column-xs#{$name} {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @media(min-width: $screen-sm-min) {
+    .row-same-height .column-xs#{$name} {
+      @include same-height;
+    }
+  }
+}

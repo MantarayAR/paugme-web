@@ -16,4 +16,5 @@ elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.scripts(['_lightbulb.js']);
 });

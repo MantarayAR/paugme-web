@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+.inverse {
+  color: $color-white;
+}
+
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
 // Paragraphs
 //
 // <p>Paragraph example</p>
@@ -44,7 +57,7 @@ h3,
 .h3,
 h4,
 .h4 {
-  color: $color-white;
+  color: $color-black;
   font-family: $font-sans-serif;
   font-weight: $font-weight-medium;
 }
@@ -149,10 +162,11 @@ ul, ol {
 
   &.pills {
     float: left;
+    list-style: none;
+    margin-right:(2 * $measure-large);
 
-    & + & {
-      list-style: none;
-      margin-left:(2 * $measure-large);
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -163,4 +177,37 @@ ul, ol {
 .img-responsive {
   max-height: auto;
   width: 100%;
+}
+
+// Hidden
+//
+// Styleguide 2.6
+.hidden-xs {
+  @media(max-width: $screen-xs-max) {
+    display: none !important;
+  }
+}
+
+.hidden-sm {
+  @media(min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+    display: none !important;
+  }
+}
+
+.hidden-md {
+  @media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: none !important;
+  }
+}
+
+.hidden-lg {
+  @media(min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: none !important;
+  }
+}
+
+.hidden-xl {
+  @media(min-width: $screen-lg-min) {
+    display: none !important;
+  }
 }
