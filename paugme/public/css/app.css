@@ -47,8 +47,18 @@ table {
   margin-left: auto;
   margin-right: auto; }
 
-.text-center, .home__signup, .home__circuits, .home__biology {
+.text-center, .home__signup, .home__circuits, .home__biology, .home__rest {
   text-align: center; }
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute; }
 
 p {
   color: #333;
@@ -344,6 +354,7 @@ a.button {
 
 .button-yellow {
   color: #333;
+  border-color: #fc0;
   background-color: #fc0; }
   .button-yellow:hover,
   .button-yellow:active,
@@ -363,7 +374,25 @@ a.button {
   line-height: 1.44;
   padding: 36px 54px; }
 
+input[type=text],
+input[type=email] {
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 9px;
+  margin-top: 6px;
+  padding: 9px;
+  width: 100%; }
+
+label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-bottom: 9px; }
+
 .home__welcome {
+  background-color: #ccc;
   background-image: url(/images/iphone-blurred.jpg);
   background-size: cover;
   height: 90vh;
@@ -451,6 +480,10 @@ a.button {
 .home__signup {
   background-color: #0288d1;
   padding: 6vh; }
+  .home__signup h3 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 30px; }
 
 .home__circuits {
   background-color: #222;
@@ -513,7 +546,11 @@ a.button {
   background-color: #0288d1;
   padding: 6vh; }
   .home__biology h2 {
-    font-size: 32px; }
+    color: #fff;
+    font-size: 32px;
+    font-weight: 300; }
+  .home__biology h3, .home__biology p {
+    color: #fff; }
   .home__biology .row {
     width: 50%;
     margin-left: auto;
@@ -530,3 +567,101 @@ a.button {
         width: 50%; } }
   .home__biology img {
     margin: 0 auto; }
+
+.home__rest {
+  zoom: 1;
+  background-color: #efefef;
+  padding: 6vh; }
+  .home__rest:before, .home__rest:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .home__rest:after {
+    clear: both; }
+  .home__rest .row {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 1199px) {
+      .home__rest .row {
+        width: 60%; } }
+    @media (max-width: 991px) {
+      .home__rest .row {
+        width: 80%; } }
+    @media (max-width: 767px) {
+      .home__rest .row {
+        width: 90%; } }
+  .home__rest h2, .home__rest h3 {
+    text-align: center; }
+
+.home__rest_icon {
+  font-size: 100px;
+  margin-top: 6vh; }
+
+.sign-up {
+  background-color: #0288d1;
+  height: 90vh;
+  margin: 0;
+  padding: 6vh; }
+
+#mc_embed_signup {
+  width: 50%;
+  background-color: #fff;
+  border: 0 solid transparent;
+  box-shadow: 3px 2px 4px rgba(100, 100, 100, 0.8);
+  margin: 0 auto;
+  padding: 18px; }
+  @media (max-width: 1199px) {
+    #mc_embed_signup {
+      width: 60%; } }
+  @media (max-width: 991px) {
+    #mc_embed_signup {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    #mc_embed_signup {
+      width: 90%; } }
+  #mc_embed_signup h2 {
+    font-size: 32px;
+    margin-bottom: 9px; }
+  #mc_embed_signup p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.44; }
+  #mc_embed_signup .indicates-required {
+    float: right;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px; }
+  #mc_embed_signup .mc-field-group {
+    margin: 30px 0; }
+  #mc_embed_signup .mce_inline_error {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 6px; }
+  #mc_embed_signup .response {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px; }
+
+.sign-up__link-back {
+  width: 50%;
+  margin: 30px auto; }
+  @media (max-width: 1199px) {
+    .sign-up__link-back {
+      width: 60%; } }
+  @media (max-width: 991px) {
+    .sign-up__link-back {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    .sign-up__link-back {
+      width: 90%; } }
+  .sign-up__link-back a {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px; }
+
+footer {
+  background-color: #222;
+  color: #fff; }

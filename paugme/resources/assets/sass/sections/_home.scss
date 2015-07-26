@@ -6,6 +6,7 @@
 }
 
 .home__welcome {
+  background-color: $color-silver;
   background-image: url(/images/iphone-blurred.jpg);
   background-size: cover;
   height: 90vh;
@@ -86,7 +87,7 @@
 
   background-color: rgba($color-yellow, .8);
   border-radius: 0;
-  box-shadow: 3px 2px 4px rgba(100,100,100,0.8);
+  box-shadow: $floating-box;
   padding: $measure-large;
   margin: $measure-xlarge auto;
   text-align: left;
@@ -113,6 +114,12 @@
 
   background-color: $color-lochmara;
   padding: 6vh;
+
+  h3 {
+    color: $color-text-on-blue;
+    font-weight: $font-weight-medium;
+    margin-bottom: $measure-xlarge;
+  }
 }
 
 .home__circuits {
@@ -179,7 +186,13 @@
   padding: 6vh;
 
   h2 {
+    color: $color-text-on-blue;
     font-size: $font-size-xlarge;
+    font-weight: $font-weight-light;
+  }
+
+  h3, p {
+    color: $color-text-on-blue;
   }
 
   .row {
@@ -195,3 +208,26 @@
   }
 }
 
+
+.home__rest {
+  @include clearfix;
+  @extend .text-center;
+
+  background-color: $color-gallery;
+  padding: 6vh;
+
+  .row {
+    @include responsive-width(50%, 60%, 80%, 90%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+}
+
+.home__rest_icon {
+  font-size: 100px;
+  margin-top: 6vh;
+}

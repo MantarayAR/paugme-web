@@ -15,6 +15,12 @@ var elixir = require('laravel-elixir');
 elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.sass('app.scss');
-    mix.scripts(['_lightbulb.js']);
+    mix.sass([
+        'app.scss'
+    ]);
+    mix.scripts([
+            '_lightbulb.js'
+        ],
+        'public/js/home.js'
+    );
 });

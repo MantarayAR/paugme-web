@@ -1,5 +1,3 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 // Scaffolding
 @import 'reset';
 @import 'variables';
@@ -9,6 +7,9 @@
 
 // Components
 @import 'buttons';
+@import 'forms';
 
 // BEM
-@import 'home';
+@import 'sections/home';
+@import 'sections/sign-up';
+@import 'sections/footer';

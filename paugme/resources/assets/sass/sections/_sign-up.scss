@@ -1,0 +1,66 @@
+// Sign Up
+//
+// Styleguide 3.3
+.sign-up {
+  background-color: $color-lochmara;
+  height: 90vh;
+  margin: 0;
+  padding: 6vh;
+}
+
+#mc_embed_signup {
+  @include responsive-width(50%, 60%, 80%, 90%);
+
+  background-color: $color-white;
+  border: 0 solid transparent;
+  box-shadow: $floating-box;
+  margin: 0 auto;
+  padding: (2 * $measure-large);
+
+  h2 {
+    font-size: $font-size-xlarge;
+    margin-bottom: $measure-large;
+  }
+
+  p {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-small;
+  }
+
+  .indicates-required {
+    float: right;
+    font-family: $font-sans-alternative;
+    font-size: $font-size-medium;
+  }
+
+  .mc-field-group {
+    margin: $measure-xlarge 0;
+  }
+
+  .mce_inline_error {
+    font-family: $font-sans-serif;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-light;
+    padding: $measure-normal;
+  }
+
+  .response {
+    font-family: $font-sans-serif;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-light;
+    margin-bottom: $measure-xlarge;
+  }
+}
+
+.sign-up__link-back {
+  @include responsive-width(50%, 60%, 80%, 90%);
+  margin: $measure-xlarge auto;
+
+  a {
+    color: $color-text-on-blue;
+    font-family: $font-sans-alternative;
+    font-size: $font-size-medium;
+  }
+}
+
