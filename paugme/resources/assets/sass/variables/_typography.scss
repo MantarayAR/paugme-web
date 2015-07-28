@@ -19,6 +19,8 @@ $line-height-medium:  1.44;
 $line-height-small:   1.44;
 $line-height-xsmall:  1.2;
 
+$line-height-computed: $font-size-medium * $line-height-medium;
+
 $font-weight-heavy:  700;
 $font-weight-medium: 400;
 $font-weight-light:  300;

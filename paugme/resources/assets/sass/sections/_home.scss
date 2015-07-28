@@ -68,11 +68,11 @@
   }
 }
 
-.home__packages {
+.home__packages, .home__share {
   background-color: $color-gallery;
   background-image: url(/images/temp-abstract-background-white.png);
   background-size: cover;
-  padding: 10vh $measure-xlarge;
+  padding: 6vh $measure-xlarge;
   text-align: center;
 
   p {

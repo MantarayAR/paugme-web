@@ -1,0 +1,18 @@
+// Share
+//
+// Styleguide 3.4
+.sign-up__share {
+  @include responsive-width(50%, 60%, 80%, 90%);
+
+  background-color: $color-white;
+  border: 0 solid transparent;
+  box-shadow: $floating-box;
+  margin: $measure-xlarge auto 0;
+  padding: (2 * $measure-large);
+
+  p {
+    font-size: $font-size-large;
+    margin-bottom: $measure-large;
+  }
+}
+

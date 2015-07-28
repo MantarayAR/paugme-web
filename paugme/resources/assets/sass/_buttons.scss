@@ -7,6 +7,7 @@
   border: 1px solid $color-lochmara;
   border-radius: $border-radius;
   color: $color-text-on-blue;
+  cursor: pointer;
   display: inline-block;
   font-family: $font-sans-serif;
   font-size: $font-size-medium;
@@ -58,3 +59,117 @@ a.button {
   line-height: $line-height-large;
   padding: (4 * $measure-large) (6 * $measure-large);
 }
+
+// Social Buttons for Bootstrap
+//
+// Copyright 2013-2015 Panayiotis Lipiridis
+// Licensed under the MIT License
+//
+// https://github.com/lipis/bootstrap-social
+//
+// Styleguide 3.1
+$bs-height-base: ($line-height-computed + $measure-normal * 2);
+$bs-height-lg:   (floor($font-size-large * $line-height-medium) + $measure-normal * 2);
+$bs-height-sm:   (floor($font-size-small * 1.5) + $measure-thin * 2);
+$bs-height-xs:   (floor($font-size-small * 1.2) + $measure-thin + 1);
+
+.button-social {
+  position: relative;
+  padding-left: ($bs-height-base + $measure-normal);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  > :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $bs-height-base;
+    line-height: ($bs-height-base + 2);
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  &.button-large {
+    padding-left: ($bs-height-lg + $measure-large);
+    > :first-child {
+      line-height: $bs-height-lg;
+      width: $bs-height-lg;
+      font-size: 1.4em;
+    }
+  }
+  &.button-small {
+    padding-left: ($bs-height-sm + $measure-thin);
+    > :first-child {
+      line-height: $bs-height-sm;
+      width: $bs-height-sm;
+      font-size: 1.2em;
+    }
+  }
+  &.button-xsmall {
+    padding-left: ($bs-height-xs + $measure-thin);
+    > :first-child {
+      line-height: $bs-height-xs;
+      width: $bs-height-xs;
+      font-size: 1.0em;
+    }
+  }
+}
+
+.button-social-icon {
+  @extend .button-social;
+  height: ($bs-height-base + 2);
+  width: ($bs-height-base + 2);
+  padding: 0;
+  > :first-child {
+    border: none;
+    text-align: center;
+    width: 100%!important;
+  }
+  &.button-large {
+    height: $bs-height-lg;
+    width: $bs-height-lg;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.button-small {
+    height: ($bs-height-sm + 2);
+    width: ($bs-height-sm + 2);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.button-xssmall {
+    height: ($bs-height-xs + 2);
+    width: ($bs-height-xs + 2);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin button-social($color-bg, $color: #fff) {
+  background-color: $color-bg;
+  @include button-variant($color, $color-bg, rgba(0,0,0,.2));
+}
+
+
+.button-adn           { @include button-social(#d87a68); }
+.button-bitbucket     { @include button-social(#205081); }
+.button-dropbox       { @include button-social(#1087dd); }
+.button-facebook      { @include button-social(#3b5998); }
+.button-flickr        { @include button-social(#ff0084); }
+.button-foursquare    { @include button-social(#f94877); }
+.button-github        { @include button-social(#444444); }
+.button-google        { @include button-social(#dd4b39); }
+.button-instagram     { @include button-social(#3f729b); }
+.button-linkedin      { @include button-social(#007bb6); }
+.button-microsoft     { @include button-social(#2672ec); }
+.button-openid        { @include button-social(#f7931e); }
+.button-pinterest     { @include button-social(#cb2027); }
+.button-reddit        { @include button-social(#eff7ff, #000); }
+.button-soundcloud    { @include button-social(#ff5500); }
+.button-tumblr        { @include button-social(#2c4762); }
+.button-twitter       { @include button-social(#55acee); }
+.button-vimeo         { @include button-social(#1ab7ea); }
+.button-vk            { @include button-social(#587ea3); }
+.button-yahoo         { @include button-social(#720e9e); }

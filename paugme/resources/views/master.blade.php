@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel</title>
+    <title>Paugme Packs</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Roboto:100' rel='stylesheet' type='text/css'>

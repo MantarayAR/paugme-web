@@ -120,6 +120,7 @@
                     </div>
                 </div>
             </div>
+            <p>And more Paugme Packs are on their way!</p>
         </div>
 
         <div class="home__signup">
@@ -146,7 +147,8 @@
                     </div>
                 </div>
                 <div class="home__circuit_circuit_text column-xs two-thirds">
-                    <p>Learn about logic gates and how to build motion sensing circuits.</p>
+                    <p>Learn about logic gates and how to store data. We even provide
+                    additional activities, like how to build motion sensing circuits.</p>
                 </div>
                 <div class="home__circuit_circuit column-xs one-third hidden-xs">
                     <!-- Circuit -->
@@ -174,13 +176,13 @@
 
                     <h3>Cells</h3>
                     <p>Learn about animal cells and plant cells
-                        and how they differ from each other.</p>
+                        and how they differ from each other</p>
                 </div>
                 <div class="column-xs one-half">
                     <img src="http://placehold.it/200x200" />
 
                     <h3>Ecology</h3>
-                    <p>TODO</p>
+                    <p>Find out how organisms are related to one another</p>
                 </div>
             </div>
             <div class="row">
@@ -188,14 +190,14 @@
                     <img src="http://placehold.it/200x200" />
 
                     <h3>Plants</h3>
-                    <p>TODO</p>
+                    <p>Find out what makes a plant a plant and how photosynthesis works</p>
                 </div>
                 <div class="column-xs one-half">
                     <img src="http://placehold.it/200x200" />
 
 
-                    <h3>Evolution</h3>
-                    <p>TODO</p>
+                    <h3>Viruses and Bacteria</h3>
+                    <p>Investigate illnesses and what causes them!</p>
                 </div>
             </div>
         </div>
@@ -219,7 +221,9 @@
             <h3 class="text-center">A new subject every month!</h3>
             <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
         </div>
-
+        <div class="home__share">
+            @include('home._share')
+        </div>
     </div>
 @stop
 
