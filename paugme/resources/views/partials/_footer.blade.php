@@ -6,7 +6,9 @@
     <ul>
         <li><a class="inverse" href="/">Home</a></li>
         <li><a class="inverse" href="/about">About</a></li>
-        <li><a class="inverse" href="/blog">Blog</a></li>
+        <li><a class="inverse" href="/sign-up">Sign Up</a></li>
+        <li><a class="inverse" href="/contact-us">Questions?</a></li>
+        {{--<li><a class="inverse" href="/blog">Blog</a></li>--}}
 
     </ul>
 </footer>

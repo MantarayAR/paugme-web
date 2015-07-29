@@ -1,0 +1,14 @@
+// Backdrops
+//
+// Styleguide 6
+.backdrop {
+  min-height: 90vh;
+  margin: 0;
+  padding: 6vh;
+}
+
+.blue-backdrop {
+  @extend .backdrop;
+
+  background-color: $color-lochmara;
+}

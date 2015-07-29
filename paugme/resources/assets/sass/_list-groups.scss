@@ -1,0 +1,18 @@
+// List Groups
+//
+// Styleguide 9
+.list-group {
+  background-color: $color-white;
+  display: block;
+  margin: $measure-large 0;
+  min-width: 300px;
+
+  li {
+    display: block;
+    padding: $measure-large $measure-normal;
+
+    & + li {
+      border-top: 1px solid $color-silver;
+    }
+  }
+}

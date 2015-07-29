@@ -355,6 +355,14 @@ a {
     float: none;
     vertical-align: top; } }
 
+.backdrop, .blue-backdrop, .sign-up {
+  min-height: 90vh;
+  margin: 0;
+  padding: 6vh; }
+
+.blue-backdrop, .sign-up {
+  background-color: #0288d1; }
+
 .button {
   background-color: #0288d1;
   border: 1px solid #0288d1;
@@ -1676,6 +1684,41 @@ label {
   font-size: 16px;
   margin-bottom: 9px; }
 
+.panel, #mc_embed_signup {
+  width: 50%;
+  background-color: #fff;
+  border: 0 solid transparent;
+  box-shadow: 3px 2px 4px rgba(100, 100, 100, 0.8);
+  margin: 0 auto;
+  padding: 18px; }
+  @media (max-width: 1199px) {
+    .panel, #mc_embed_signup {
+      width: 60%; } }
+  @media (max-width: 991px) {
+    .panel, #mc_embed_signup {
+      width: 80%; } }
+  @media (max-width: 767px) {
+    .panel, #mc_embed_signup {
+      width: 90%; } }
+  .panel h2, #mc_embed_signup h2 {
+    font-size: 32px;
+    margin-bottom: 9px; }
+  .panel p, #mc_embed_signup p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.44; }
+
+.list-group {
+  background-color: #fff;
+  display: block;
+  margin: 9px 0;
+  min-width: 300px; }
+  .list-group li {
+    display: block;
+    padding: 9px 6px; }
+    .list-group li + li {
+      border-top: 1px solid #ccc; }
+
 .home__welcome {
   background-color: #ccc;
   background-image: url(/images/iphone-blurred.jpg);
@@ -1896,51 +1939,25 @@ label {
     .home__rest_icon {
       margin-top: 30px; } }
 
-.sign-up {
-  background-color: #0288d1;
-  height: 90vh;
-  margin: 0;
-  padding: 6vh; }
+#mc_embed_signup .indicates-required {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
 
-#mc_embed_signup {
-  width: 50%;
-  background-color: #fff;
-  border: 0 solid transparent;
-  box-shadow: 3px 2px 4px rgba(100, 100, 100, 0.8);
-  margin: 0 auto;
-  padding: 18px; }
-  @media (max-width: 1199px) {
-    #mc_embed_signup {
-      width: 60%; } }
-  @media (max-width: 991px) {
-    #mc_embed_signup {
-      width: 80%; } }
-  @media (max-width: 767px) {
-    #mc_embed_signup {
-      width: 90%; } }
-  #mc_embed_signup h2 {
-    font-size: 32px;
-    margin-bottom: 9px; }
-  #mc_embed_signup p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.44; }
-  #mc_embed_signup .indicates-required {
-    float: right;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px; }
-  #mc_embed_signup .mc-field-group {
-    margin: 30px 0; }
-  #mc_embed_signup .mce_inline_error {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    padding: 6px; }
-  #mc_embed_signup .response {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 30px; }
+#mc_embed_signup .mc-field-group {
+  margin: 30px 0; }
+
+#mc_embed_signup .mce_inline_error {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 6px; }
+
+#mc_embed_signup .response {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 30px; }
 
 .sign-up__link-back {
   width: 50%;

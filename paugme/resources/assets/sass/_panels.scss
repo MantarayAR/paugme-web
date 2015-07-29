@@ -1,0 +1,23 @@
+// Panels
+//
+// Styleguide 7
+.panel {
+  @include responsive-width(50%, 60%, 80%, 90%);
+
+  background-color: $color-white;
+  border: 0 solid transparent;
+  box-shadow: $floating-box;
+  margin: 0 auto;
+  padding: (2 * $measure-large);
+
+  h2 {
+    font-size: $font-size-xlarge;
+    margin-bottom: $measure-large;
+  }
+
+  p {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-small;
+  }
+}

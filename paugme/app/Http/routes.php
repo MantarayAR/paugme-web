@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::get('/sign-up', function () {
     return view('home.sign-up');
 });
+
+Route::get('/about', function () {
+    return view('home.about');
+});
+
+Route::get('/contact-us', function() {
+    return view('home.contact-us');
+});
+
+Route::post('/contact-us', 'ContactUsController@postContactUs');
