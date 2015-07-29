@@ -2,6 +2,40 @@
 //
 // Styleguide 3.2
 footer {
+  @include clearfix;
+
   background-color: $color-mine-shaft;
   color: $color-white;
+  padding: $measure-xlarge;
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: $color-white;
+  }
+
+  ul {
+    display: block;
+    float: right;
+    margin-top: $measure-thin;
+
+    li {
+      display: inline-block;
+
+      a {
+        border: 2px solid $color-white;
+        display: block;
+        margin-left: $measure-large;
+        padding: $measure-normal $measure-large;
+        text-decoration: none;
+
+        transition: all .2s;
+
+        &:hover {
+          background-color: $color-tundora;
+        }
+      }
+    }
+  }
 }

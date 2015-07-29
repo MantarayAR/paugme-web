@@ -4,32 +4,22 @@
     <title>Paugme Packs</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Roboto:100' rel='stylesheet'
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Roboto:100,400' rel='stylesheet'
           type='text/css'>
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
     @yield('head')
-    @include('_favicon')
+    @include('partials._favicon')
+
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<header>
 
-</header>
-
+@include('partials._header')
 @yield('content')
-
-<footer>
-    <h2>Paugme Packs</h2>
-
-    <p>Copyright &copy; 2015 Mantaray AR LLC</p>
-
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-
-    </ul>
-</footer>
-<script src="js/jquery-1.11.3.min.js"></script>
+@include('partials._footer')
+<script src="js/vendor/jquery-1.11.3.min.js"></script>
 @yield('scripts')
 </body>

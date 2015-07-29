@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-
+require('laravel-elixir-browser-sync');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -23,4 +23,13 @@ elixir(function(mix) {
         ],
         'public/js/home.js'
     );
+
+    //mix.browserSync([
+    //    'app/**/*',
+    //    'public/**/*',
+    //    'resources/views/**/*',
+    //    'resources/assets/**/*',
+    //], {
+    //    proxy: 'http://localhost:8000'
+    //});
 });

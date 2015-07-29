@@ -105,6 +105,7 @@ h3,
 
   @media(max-width: $screen-xs-max) {
     font-size: $font-size-medium;
+    font-weight: normal;
     line-height: $line-height-medium;
   }
 }
@@ -118,6 +119,7 @@ h4,
 
   @media(max-width: $screen-xs-max) {
     font-size: $font-size-small;
+    font-weight: normal;
     line-height: $line-height-small;
   }
 }
@@ -184,6 +186,9 @@ ul, ol {
 // Images
 //
 // Styleguide 2.5
+img {
+  max-width: 100%;
+}
 .img-responsive {
   max-height: auto;
   width: 100%;
@@ -219,5 +224,30 @@ ul, ol {
 .hidden-xl {
   @media(min-width: $screen-lg-min) {
     display: none !important;
+  }
+}
+
+// Links
+//
+// Styleguide 2.7
+a {
+  color: $color-black;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.hover,
+  &.active {
+    color: darken($color-black, 10);
+  }
+
+  &.inverse {
+    &:hover,
+    &:active,
+    &:focus,
+    &.hover,
+    &.active {
+      color: darken($color-white, 10);
+    }
   }
 }

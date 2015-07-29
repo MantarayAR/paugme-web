@@ -201,6 +201,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 6vh;
+
+    @media (max-width: $screen-xs-max) {
+      & + .row {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .column-xs {
+      margin-bottom: $measure-xlarge;
+    }
   }
 
   img {
@@ -222,6 +234,12 @@
     margin-right: auto;
   }
 
+  @media (max-width: $screen-xs-max) {
+    .column-xs {
+      margin-top: $measure-xlarge;
+    }
+  }
+
   h2, h3 {
     text-align: center;
   }
@@ -230,4 +248,8 @@
 .home__rest_icon {
   font-size: 100px;
   margin-top: 6vh;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: $measure-xlarge;
+  }
 }
