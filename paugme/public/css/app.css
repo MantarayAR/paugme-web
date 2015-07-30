@@ -1668,7 +1668,8 @@ a.button {
     background-color: #fff; }
 
 input[type=text],
-input[type=email] {
+input[type=email],
+textarea {
   border: 1px solid #efefef;
   border-radius: 3px;
   font-family: "Open Sans", sans-serif;

@@ -3,7 +3,8 @@
 // Styleguide 5
 
 input[type=text],
-input[type=email] {
+input[type=email],
+textarea {
   border: 1px solid $color-gallery;
   border-radius: $border-radius;
   font-family: $font-sans-serif;
