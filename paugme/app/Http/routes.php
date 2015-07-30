@@ -27,4 +27,9 @@ Route::get('/contact-us', function() {
     return view('home.contact-us');
 });
 
-Route::post('/contact-us', 'ContactUsController@postContactUs');
+Route::post('/contact-us', 'ContactController@store');
+
+Route::get('/thank-you', function () {
+    return view('home.thank-you');
+});
+

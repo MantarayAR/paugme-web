@@ -12,7 +12,16 @@ class CreateContact extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('contacts', function ( Blueprint $table ) {
+            $table->increments('id');
+            $table->string('email');
+            $table->string('message');
+            $table->enum('source', [
+                'General',
+                'Investor',
+            ]);
+            $table->timestamps();
+        } );
     }
 
     /**
@@ -22,6 +31,6 @@ class CreateContact extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('contacts');
     }
 }

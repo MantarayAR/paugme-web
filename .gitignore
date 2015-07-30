@@ -4,3 +4,5 @@
 .env
 .DS_Store
 .idea
+.bash_history
+.cache

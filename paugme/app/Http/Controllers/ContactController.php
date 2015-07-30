@@ -2,86 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Commands\CreateContactCommand;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\ContactRequest;
 use App\Http\Controllers\Controller;
+use App\Contact;
 
 class ContactController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return Response
+     * @param ContactRequest $request ContactRequest
      */
-    public function index()
-    {
-        //
-    }
+    public function store( ContactRequest $request ) {
+        $contact = new Contact([
+            'email' => $request->email,
+            'message' => $request->message,
+            'source' => 'General'
+        ]);
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
+        $command = new CreateContactCommand( $contact );
+        $this->dispatch( $command );
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
+        return redirect()->to('/thank-you');
     }
 }

@@ -2,9 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Contact extends Model
+class Contact extends Eloquent
 {
-    //
+    protected $fillable = array(
+        'email',
+        'message',
+        'source'
+    );
 }
