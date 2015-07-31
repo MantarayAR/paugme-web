@@ -19,15 +19,6 @@ return [
         'secret' => '',
     ],
 
-    'mandrill' => [
-        'secret' => '',
-    ],
-
-    'ses' => [
-        'key'    => '',
-        'secret' => '',
-        'region' => 'us-east-1',
-    ],
 
     'stripe' => [
         'model'  => App\User::class,

@@ -10,14 +10,16 @@ class ContactWasCreatedEvent extends Event
 {
     use SerializesModels;
 
+    public $contact;
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( $contact )
     {
-        //
+        $this->contact = $contact;
     }
 
     /**

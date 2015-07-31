@@ -26,6 +26,6 @@ class NotifyAdministratorsOfNewContact
      */
     public function handle(ContactWasCreatedEvent $event)
     {
-        //
+        // TODO
     }
 }

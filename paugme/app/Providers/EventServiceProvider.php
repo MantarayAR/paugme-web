@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use App\Handlers\Events\NotifyAdministratorsOfNewContact;
+use App\Handlers\Events\ThankContactSender;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,8 +15,9 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'App\Events\ContactWasCreatedEvent' => [
+            NotifyAdministratorsOfNewContact::class,
+            ThankContactSender::class,
         ],
     ];
 
