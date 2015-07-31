@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin-top: $header-height;
+}
+
 .inverse {
   color: $color-white;
 }
@@ -249,5 +253,9 @@ a {
     &.active {
       color: darken($color-white, 10);
     }
+  }
+
+  &.no-decoration {
+    text-decoration: none;
   }
 }

@@ -7,7 +7,7 @@
             <div class="home__welcome_card"></div>
             <div class="home__welcome_panel">
                 <div class="home__welcome_icon">
-                    <img src="/images/blue-logo-150x150.png"/>
+                    <img src="/images/logo.png"/>
                 </div>
                 <h1>Paugme Packs</h1>
 

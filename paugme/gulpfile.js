@@ -22,4 +22,8 @@ elixir(function(mix) {
         ],
         'public/js/home.js'
     );
+
+    mix.scripts([
+        '_all.js'
+    ], 'public/js/all.js');
 });

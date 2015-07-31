@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <div class="blue-backdrop">
+    <div class="blue-backdrop push">
         <div class="panel">
             <div class="panel-content">
                 <h2>About Paugme Packs</h2>

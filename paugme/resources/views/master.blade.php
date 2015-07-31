@@ -21,5 +21,7 @@
 @yield('content')
 @include('partials._footer')
 <script src="js/vendor/jquery-1.11.3.min.js"></script>
+<script src="js/vendor/headroom-0.7.0.min.js"></script>
+<script src="js/all.js"></script>
 @yield('scripts')
 </body>
