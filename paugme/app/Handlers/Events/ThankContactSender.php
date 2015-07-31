@@ -27,7 +27,7 @@ class ThankContactSender
      */
     public function handle(ContactWasCreatedEvent $event)
     {
-        Mail::send('emails.thank-you', [
+        Mail::queue('emails.thank-you', [
             'contact' => $event->contact
         ], function ( $message ) use ( $event ) {
             $message->to(
