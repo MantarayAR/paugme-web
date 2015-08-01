@@ -1,4 +1,8 @@
 var elixir = require('laravel-elixir');
+var gulp = require('gulp');
+var rename = require('gulp-rename');
+var inlineCss = require('gulp-inline-css');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,17 +17,40 @@ var elixir = require('laravel-elixir');
 // Comment this line out for development:
 elixir.config.sourcemaps = false;
 
+var email_view_path = 'resources/views/emails/*.hbs';
+var email_css_path  = 'public/css/email.css';
+
+elixir.extend('emails', function () {
+    gulp.task('compile-emails', function () {
+
+        return gulp.src(email_view_path)
+            .pipe(inlineCss())
+            .pipe(rename(function (path) {
+                path.basename += "-compiled";
+                path.extname = ".blade.php"
+            }))
+            .pipe(gulp.dest('resources/views/emails/build'));
+    });
+
+    this.registerWatcher('compile-emails', email_view_path);
+    return this.queueTask('compile-emails');
+});
+
 elixir(function(mix) {
     mix.sass([
         'app.scss'
     ]);
+
+    mix.sass([
+        'email.scss'
+    ], email_css_path).emails();
+
     mix.scripts([
-            '_lightbulb.js'
-        ],
-        'public/js/home.js'
-    );
+        '_lightbulb.js'
+    ], 'public/js/home.js');
 
     mix.scripts([
         '_all.js'
     ], 'public/js/all.js');
 });
+

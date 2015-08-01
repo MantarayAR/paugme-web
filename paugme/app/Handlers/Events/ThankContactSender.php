@@ -7,7 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Mail;
 
-class ThankContactSender
+class ThankContactSender implements ShouldQueue
 {
     /**
      * Create the event handler.
@@ -27,7 +27,9 @@ class ThankContactSender
      */
     public function handle(ContactWasCreatedEvent $event)
     {
-        Mail::queue('emails.thank-you', [
+
+
+        Mail::queue('emails..build.thank-you-compiled', [
             'contact' => $event->contact
         ], function ( $message ) use ( $event ) {
             $message->to(
