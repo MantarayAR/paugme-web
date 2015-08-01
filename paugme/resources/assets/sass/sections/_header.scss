@@ -10,6 +10,7 @@
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 1;
 }
 
 .header__logo {
@@ -35,6 +36,7 @@
 
 .header__links {
   margin-right: $measure-xlarge;
+  padding-top: $measure-thin;
 
   ul {
     display: block;

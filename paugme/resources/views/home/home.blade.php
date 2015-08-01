@@ -4,17 +4,18 @@
 @section('content')
     <div class="home">
         <div class="home__welcome">
-            <div class="home__welcome_card"></div>
-            <div class="home__welcome_panel">
-                <div class="home__welcome_icon">
-                    <img src="/images/logo.png"/>
+            <div class="home__welcome_card">
+                <div class="home__welcome_panel">
+                    <div class="home__welcome_icon">
+                        <img src="/images/logo.png"/>
+                    </div>
+                    <h1>Paugme Packs</h1>
+
+                    <h2>Educational kits for children</h2>
+
+
+                    <a href="sign-up" class="button button-large">Sign Up for Early Access</a>
                 </div>
-                <h1>Paugme Packs</h1>
-
-                <h2>Educational kits for children</h2>
-
-
-                <a href="sign-up" class="button button-large">Sign Up for Early Access</a>
             </div>
         </div>
 

@@ -1729,32 +1729,19 @@ label {
   background-color: #ccc;
   background-image: url(/images/iphone-blurred.jpg);
   background-size: cover;
-  height: 90vh;
-  position: relative; }
-
-.home__welcome_card {
-  background-color: rgba(34, 34, 34, 0.3);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  top: 0; }
+  height: 90vh; }
 
 .home__welcome_panel {
-  bottom: 0;
-  left: 0;
   max-height: 90vh;
-  padding: 20vh 30px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0; }
+  padding: 10vh 30px;
+  text-align: center; }
   .home__welcome_panel * {
     text-align: center; }
   .home__welcome_panel h1 {
     border-bottom: 3px solid #fff;
     display: inline-block;
-    margin-bottom: 5vh; }
+    margin-bottom: 5vh;
+    text-shadow: 0 0 100px black; }
   .home__welcome_panel h2 {
     margin-bottom: 5vh; }
   .home__welcome_panel h3 {
@@ -2043,7 +2030,8 @@ footer {
   max-height: 50px;
   position: fixed;
   right: 0;
-  top: 0; }
+  top: 0;
+  z-index: 1; }
 
 .header__logo {
   float: left;
@@ -2063,7 +2051,8 @@ footer {
   vertical-align: middle; }
 
 .header__links {
-  margin-right: 30px; }
+  margin-right: 30px;
+  padding-top: 3px; }
   .header__links ul {
     display: block;
     float: right;

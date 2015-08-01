@@ -10,27 +10,12 @@
   background-image: url(/images/iphone-blurred.jpg);
   background-size: cover;
   height: 90vh;
-  position: relative
-}
-
-.home__welcome_card {
-  background-color: rgba( $color-mine-shaft, .3 );
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  top: 0;
 }
 
 .home__welcome_panel {
-  bottom: 0;
-  left: 0;
   max-height: 90vh;
-  padding: 20vh $measure-xlarge;
-  position: absolute;
-  right: 0;
+  padding: 10vh $measure-xlarge;
   text-align: center;
-  top: 0;
 
   * {
     @extend .inverse;
@@ -41,6 +26,7 @@
     border-bottom: $measure-thin solid $color-white;
     display: inline-block;
     margin-bottom: 5vh;
+    text-shadow: 0 0 100px black;
   }
 
   h2 {
