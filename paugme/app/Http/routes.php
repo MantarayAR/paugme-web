@@ -33,3 +33,4 @@ Route::get('/thank-you', function () {
     return view('home.thank-you');
 });
 
+Route::get('email/{emailName}', 'EmailController@view');
