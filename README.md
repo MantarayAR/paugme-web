@@ -1,4 +1,13 @@
 
+# Environment
+
+You can set your environment settings in `.env`.
+
+- APP_KEY should be a 32 character random string
+- MAILGUN_DOMAIN and MAILGUN_SECRET should be set to the free
+  the domain and secret of your own MailGun account when testing.
+  Don't worry, it's free for sandboxing.
+
 # Local Development
 
 You will need PostgreSQL and Redis installed.
