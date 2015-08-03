@@ -3,3 +3,4 @@
 Homestead.yaml
 .env
 /config/services.php
+composer.phar

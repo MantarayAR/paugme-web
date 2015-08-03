@@ -173,7 +173,7 @@
 
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="http://placehold.it/200x200" />
+                    <img src="/images/home/cells.png" />
 
                     <h3>Cells</h3>
                     <p>Learn about animal cells and plant cells
@@ -208,7 +208,7 @@
                 <div class="column-xs one-half">
                     <h3>Chemistry</h3>
 
-                    <span class="home__rest_icon fa fa-flask"></span>
+                    <img src="/images/beaker-100x100.png" class="home__rest_icon"/>
 
                 </div>
                 <div class="column-xs one-half">
