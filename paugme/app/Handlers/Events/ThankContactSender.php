@@ -27,10 +27,13 @@ class ThankContactSender implements ShouldQueue
      */
     public function handle(ContactWasCreatedEvent $event)
     {
-
-
-        Mail::queue('emails..build.thank-you-compiled', [
-            'contact' => $event->contact
+        Mail::queue('emails.build.thank-you-compiled', [
+            'contact' => $event->contact,
+            'thankYouTitle' => 'Thank you for message!',
+            'thankYouMessage' => "
+                A member of the Paugme Pack team will contact you
+                back as quickly as possible!
+            "
         ], function ( $message ) use ( $event ) {
             $message->to(
                 $event->contact->email,

@@ -14,7 +14,7 @@
                     <h2>Educational kits for children</h2>
 
 
-                    <a href="sign-up" class="button button-large">Sign Up for Early Access</a>
+                    @include('home._sign-up-form')
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
 
         <div class="home__signup">
             <h3>Get a new Paugme Pack delivered to you every month!</h3>
-            <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
+            @include('home._sign-up-form')
         </div>
 
         <div class="home__circuits">
@@ -220,7 +220,7 @@
         </div>
         <div class="home__signup">
             <h3 class="text-center">A new subject every month!</h3>
-            <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
+            @include('home._sign-up-form')
         </div>
         <div class="home__share">
             @include('home._share')

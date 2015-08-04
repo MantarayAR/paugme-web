@@ -1677,6 +1677,7 @@ input[type=email],
 textarea {
   border: 1px solid #efefef;
   border-radius: 3px;
+  color: #333;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -1689,6 +1690,9 @@ label {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   margin-bottom: 9px; }
+
+.form-group input[type=text] {
+  text-align: left; }
 
 .panel, #mc_embed_signup {
   width: 50%;
