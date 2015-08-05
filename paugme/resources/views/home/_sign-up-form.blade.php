@@ -5,8 +5,8 @@
     @endforeach
 </ul>
 
-<div class="form-group">
-{!! Form:: text ('email', '', array('placeholder' => 'Your Email', 'class' => 'form-control', 'id' => 'email' )) !!}
+<div class="input-group">
+{!! Form:: text ('email', '', array('placeholder' => 'Your Email', 'class' => 'input-large', 'id' => 'email' )) !!}
 {!! Form::submit('Send Me Updates', array('class' => 'button button-yellow button-large')) !!}
 </div>
 

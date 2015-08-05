@@ -13,6 +13,8 @@
 
                     <h2>Educational kits for children</h2>
 
+                    <h3>A new subject shipped to you once a month</h3>
+
 
                     @include('home._sign-up-form')
                 </div>
@@ -20,13 +22,7 @@
         </div>
 
         <div class="home__about">
-            <blockquote>
-                <p>&ldquo;Wow, this is a great quote.&rdquo;</p>
-
-                <cite>
-                    <p>- My name should be gray</p>
-                </cite>
-            </blockquote>
+            <p>Pre-orders open up soon!</p>
         </div>
 
         <div class="home__packages">
@@ -219,7 +215,8 @@
             </div>
         </div>
         <div class="home__signup">
-            <h3 class="text-center">A new subject every month!</h3>
+            <h3 class="text-center">Sign up for news and updates!
+            </h3>
             @include('home._sign-up-form')
         </div>
         <div class="home__share">

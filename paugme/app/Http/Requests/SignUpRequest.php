@@ -27,4 +27,11 @@ class SignUpRequest extends Request
             'email' => 'required|email|unique:sign_ups',
         ];
     }
+
+    public function messages() {
+        return [
+            'email.required' => 'Please enter your email address!',
+            'email.unique' => 'That email has already been signed up!'
+        ];
+    }
 }

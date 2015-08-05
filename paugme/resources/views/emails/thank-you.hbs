@@ -15,16 +15,16 @@
         <td class="container">
             <div class="content">
                 <!-- Body -->
-                <span class="preheader">{{$thankYouTitle}}</span>
+                <span class="preheader">{{$thankYouTitle or 'Thank You!'}}</span>
                 <table class="main">
                     <tr>
                         <td class="wrapper">
                             <table>
                                 <tr>
                                     <td>
-                                        <h2>{{$thankYouTitle}}</h2>
+                                        <h2>{{$thankYouTitle or 'Thank You!'}}</h2>
 
-                                        <p>{{$thankYouMessage}}</p>
+                                        <p>{{$thankYouMessage or ''}}</p>
 
                                     </td>
                                 </tr>
