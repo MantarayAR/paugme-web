@@ -1677,6 +1677,7 @@ input[type=email],
 textarea {
   border: 1px solid #efefef;
   border-radius: 3px;
+  color: #333;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -1684,11 +1685,24 @@ textarea {
   margin-top: 6px;
   padding: 9px;
   width: 100%; }
+  input[type=text].input-large,
+  input[type=email].input-large,
+  textarea.input-large {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.44;
+    padding: 18px 27px; }
 
 label {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   margin-bottom: 9px; }
+
+.input-group input {
+  width: auto; }
+
+.input-group input[type=text] {
+  text-align: left; }
 
 .panel, #mc_embed_signup {
   width: 50%;
@@ -1751,7 +1765,7 @@ label {
   background-color: #fc0;
   padding: 6vh;
   text-align: center; }
-  .home__about blockquote {
+  .home__about p, .home__about blockquote {
     font-size: 32px;
     font-weight: 100; }
   .home__about cite {
@@ -1796,7 +1810,7 @@ label {
   .home__packages_pack img {
     margin-right: 30px; }
   .home__packages_pack p {
-    font-size: 24px; }
+    font-size: 19px; }
 
 .home__signup {
   background-color: #0288d1;

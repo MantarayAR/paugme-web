@@ -7,6 +7,7 @@ input[type=email],
 textarea {
   border: 1px solid $color-gallery;
   border-radius: $border-radius;
+  color: $color-black;
   font-family: $font-sans-serif;
   font-size: $font-size-medium;
   font-weight: $font-weight-light;
@@ -14,10 +15,27 @@ textarea {
   margin-top: $measure-normal;
   padding: $measure-large;
   width: 100%;
+
+  &.input-large {
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+    line-height: $line-height-large;
+    padding: (2 * $measure-large) (3 * $measure-large);
+  }
 }
 
 label {
   font-family: $font-sans-alternative;
   font-size: $font-size-medium;
   margin-bottom: $measure-large;
+}
+
+.input-group {
+  input {
+    width: auto;
+  }
+
+  input[type=text] {
+    text-align: left;
+  }
 }

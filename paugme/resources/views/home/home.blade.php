@@ -13,20 +13,16 @@
 
                     <h2>Educational kits for children</h2>
 
+                    <h3>A new subject shipped to you once a month</h3>
 
-                    <a href="sign-up" class="button button-large">Sign Up for Early Access</a>
+
+                    @include('home._sign-up-form')
                 </div>
             </div>
         </div>
 
         <div class="home__about">
-            <blockquote>
-                <p>&ldquo;Wow, this is a great quote.&rdquo;</p>
-
-                <cite>
-                    <p>- My name should be gray</p>
-                </cite>
-            </blockquote>
+            <p>Pre-orders open up soon!</p>
         </div>
 
         <div class="home__packages">
@@ -126,7 +122,7 @@
 
         <div class="home__signup">
             <h3>Get a new Paugme Pack delivered to you every month!</h3>
-            <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
+            @include('home._sign-up-form')
         </div>
 
         <div class="home__circuits">
@@ -219,8 +215,9 @@
             </div>
         </div>
         <div class="home__signup">
-            <h3 class="text-center">A new subject every month!</h3>
-            <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
+            <h3 class="text-center">Sign up for news and updates!
+            </h3>
+            @include('home._sign-up-form')
         </div>
         <div class="home__share">
             @include('home._share')

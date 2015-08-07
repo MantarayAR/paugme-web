@@ -43,7 +43,7 @@
   padding: 6vh;
   text-align: center;
 
-  blockquote {
+  p, blockquote {
     font-size: $font-size-xlarge;
     font-weight: $font-weight-feather;
   }
@@ -83,7 +83,7 @@
   }
 
   p {
-    font-size: $font-size-large;
+    font-size: $font-size-medium + 3;
   }
 
   ul {
