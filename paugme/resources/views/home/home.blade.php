@@ -59,7 +59,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="http://placehold.it/200x200"/>
+                        <img class="img-responsive" src="http://placehold.it/200x200">
                     </div>
                     <div class="column two-thirds">
                         <h2>Biology</h2>
@@ -173,14 +173,14 @@
 
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="/images/home/cells.png" />
+                    <img src="/images/cells-home-icon.png" />
 
                     <h3>Cells</h3>
                     <p>Learn about animal cells and plant cells
                         and how they differ from each other</p>
                 </div>
                 <div class="column-xs one-half">
-                    <img src="http://placehold.it/200x200" />
+                    <img src="/images/food-chain-icon.png" />
 
                     <h3>Ecology</h3>
                     <p>Find out how organisms are related to one another</p>
@@ -188,13 +188,13 @@
             </div>
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="http://placehold.it/200x200" />
+                    <img src="/images/cells-home-icon-yellow.png" />
 
                     <h3>Plants</h3>
                     <p>Find out what makes a plant a plant and how photosynthesis works</p>
                 </div>
                 <div class="column-xs one-half">
-                    <img src="http://placehold.it/200x200" />
+                    <img src="/images/virus-bacteria-icon.png" />
 
 
                     <h3>Viruses and Bacteria</h3>
