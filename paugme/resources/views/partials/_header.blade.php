@@ -8,8 +8,8 @@
 
     <div class="header__links">
         <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
+            <li class="{{Request::path() == 'about' ? 'active' : ''}}"><a href="/about">About</a></li>
+            <li class="{{Request::path() == 'contact-us' ? 'active' : ''}}"><a href="/contact-us">Contact Us</a></li>
         </ul>
 
     </div>

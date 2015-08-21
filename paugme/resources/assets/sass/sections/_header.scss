@@ -50,6 +50,12 @@
     li {
       display: inline-block;
 
+      &.active {
+        a {
+          background-color: $color-white;
+        }
+      }
+
       a {
         border: 2px solid $color-black;
         display: block;

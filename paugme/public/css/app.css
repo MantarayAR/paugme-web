@@ -2076,6 +2076,8 @@ footer {
         display: none; } }
     .header__links ul li {
       display: inline-block; }
+      .header__links ul li.active a {
+        background-color: #fff; }
       .header__links ul li a {
         border: 2px solid #333;
         display: block;
