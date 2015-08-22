@@ -1,3 +1,7 @@
+Paugme Web
+==========
+
+The Paugme Website, built on Laravel.
 
 # Environment
 

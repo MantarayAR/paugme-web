@@ -2064,6 +2064,26 @@ footer {
   height: 44px;
   vertical-align: middle; }
 
+.header__mobile_button {
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+  float: left;
+  font-size: 32px;
+  margin-left: 9px;
+  margin-right: -9px;
+  margin-top: 3px;
+  padding: 3px 6px;
+  transition: all 0.2s; }
+  .header__mobile_button:hover,
+  .header__mobile_button:active,
+  .header__mobile_button:focus,
+  .header__mobile_button.active {
+    background-color: #fff; }
+  @media (min-width: 768px) {
+    .header__mobile_button {
+      display: none; } }
+
 .header__links {
   margin-right: 30px;
   padding-top: 3px; }
@@ -2073,9 +2093,27 @@ footer {
     margin-top: 3px; }
     @media (max-width: 767px) {
       .header__links ul {
-        display: none; } }
+        background-color: #fc0;
+        box-shadow: 3px 2px 4px rgba(100, 100, 100, 0.8);
+        min-height: 50vh;
+        left: -999px;
+        padding: 30px;
+        position: absolute;
+        top: 48px;
+        width: 50%;
+        z-index: 1;
+        transition: left 0.4s; }
+        .header__links ul.active {
+          left: 0px; }
+        .header__links ul li {
+          display: block;
+          margin-bottom: 6px;
+          text-align: center;
+          width: 100%; } }
     .header__links ul li {
       display: inline-block; }
+      .header__links ul li.active a {
+        background-color: #fff; }
       .header__links ul li a {
         border: 2px solid #333;
         display: block;
