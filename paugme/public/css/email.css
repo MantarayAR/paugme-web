@@ -24,7 +24,7 @@ body {
   width: 100% !important; }
 
 table {
-  border-collapse: separate !important;
+  border-collapse: collapse !important;
   mso-table-lspace: 0pt;
   mso-table-rspace: 0pt;
   -premailer-width: 100%; }
@@ -47,10 +47,10 @@ table {
   line-height: 100%; }
 
 body {
-  background-color: #ccc; }
+  background-color: #0288d1; }
 
 .body {
-  background-color: #ccc;
+  background-color: #0288d1;
   width: 100%; }
 
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
@@ -75,12 +75,45 @@ body {
 ------------------------------------- */
 .main {
   background: #fff;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #0278b8;
   border-radius: 3px;
   width: 100%; }
 
 .wrapper {
   padding: 30px; }
+
+.paugme_wrapper {
+  border-bottom: 1px solid #333;
+  background-color: #fc0;
+  height: 50px; }
+  .paugme_wrapper h1 {
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0;
+    padding: 9px 0 0 30px; }
+    .paugme_wrapper h1 a {
+      text-decoration: none; }
+
+.header_wrapper {
+  background-color: #fc0;
+  padding: 0;
+  text-align: center; }
+
+.header_container {
+  width: 100%; }
+
+.header_content {
+  color: #333;
+  padding: 60px 9px;
+  text-align: center;
+  width: 100%; }
+  .header_content h2 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.44; }
 
 .content-block {
   padding: 0 0 30px; }

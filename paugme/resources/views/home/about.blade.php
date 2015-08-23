@@ -19,10 +19,10 @@
                 <p>The following Paugme Packs are planned:</p>
 
                 <ul class="list-group">
-                    <li>January &mdash; Circuits</li>
-                    <li>February &mdash; Biology</li>
-                    <li>March &mdash; Chemistry</li>
-                    <li>April &mdash; Programming</li>
+                    <li>May &mdash; Circuits</li>
+                    <li>June &mdash; Biology</li>
+                    <li>July &mdash; Chemistry</li>
+                    <li>August &mdash; Programming</li>
                 </ul>
 
                 <p>The rest of the boxes will be announced in the upcoming months.</p>

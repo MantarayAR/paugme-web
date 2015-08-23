@@ -29,7 +29,7 @@ body {
 
 // Let's make sure all tables have defaults
 table {
-  border-collapse: separate !important;
+  border-collapse: collapse !important;
   mso-table-lspace:0pt;
   mso-table-rspace: 0pt;
   -premailer-width: 100%; // This is a specific style for the premailer gem

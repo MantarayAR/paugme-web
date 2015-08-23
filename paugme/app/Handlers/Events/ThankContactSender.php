@@ -29,7 +29,7 @@ class ThankContactSender implements ShouldQueue
     {
         Mail::queue('emails.build.thank-you-compiled', [
             'contact' => $event->contact,
-            'thankYouTitle' => 'Thank you for message!',
+            'thankYouTitle' => 'Thank you for your message!',
             'thankYouMessage' => "
                 A member of the Paugme Pack team will contact you
                 back as quickly as possible!
