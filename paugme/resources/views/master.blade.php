@@ -15,7 +15,7 @@
     <script src="js/vendor/html5shiv.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body>{{ Analytics::render() }}
 
 @include('partials._header')
 @yield('content')

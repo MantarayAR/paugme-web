@@ -31,10 +31,12 @@ Route::post('/contact-us', 'ContactController@store');
 Route::post('/sign-up', 'SignUpController@store');
 
 Route::get('/contact-thank-you', function () {
+    Analytics::trackEvent('conversion', 'contact');
     return view('home.thank-you-contact');
 });
 
 Route::get('/sign-up-thank-you', function () {
+    Analytics::trackEvent('conversion', 'sign-up');
     return view('home.thank-you-sign-up');
 });
 
