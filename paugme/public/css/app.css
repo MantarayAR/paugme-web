@@ -1742,11 +1742,10 @@ label {
 .home__welcome {
   background-color: #ccc;
   background-image: url(/images/iphone-blurred.jpg);
-  background-size: cover;
-  height: 90vh; }
+  background-size: cover; }
 
 .home__welcome_panel {
-  max-height: 90vh;
+  min-height: 90vh;
   padding: 10vh 30px;
   text-align: center; }
   .home__welcome_panel * {

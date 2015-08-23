@@ -32,7 +32,11 @@ elixir.extend('emails', function () {
             .pipe(gulp.dest('resources/views/emails/build'));
     });
 
-    this.registerWatcher('compile-emails', email_view_path);
+    this.registerWatcher('compile-emails', [
+        email_view_path,
+        'resources/assets/sass/**/*.scss'
+    ]);
+    // TODO also watch the sass path
     return this.queueTask('compile-emails');
 });
 
@@ -43,7 +47,9 @@ elixir(function(mix) {
 
     mix.sass([
         'email.scss'
-    ], email_css_path).emails();
+    ], email_css_path);
+
+    mix.emails();
 
     mix.scripts([
         '_lightbulb.js'

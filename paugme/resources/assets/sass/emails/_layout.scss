@@ -1,9 +1,10 @@
+
 body{
-  background-color: $color-silver;
+  background-color: $color-lochmara;
 }
 
 .body {
-  background-color: $color-silver;
+  background-color: $color-lochmara;
   width: 100%;
 }
 
@@ -32,13 +33,60 @@ body{
 
 .main {
   background: #fff;
-  border: 1px solid darken($color-silver, 5);
+  border: 1px solid darken($color-lochmara, 5);
   border-radius: $border-radius;
   width: 100%;
 }
 
 .wrapper {
   padding: $measure-xlarge;
+}
+
+.paugme_wrapper {
+  border-bottom: 1px solid $color-black;
+  background-color: $color-yellow;
+  height: 50px;
+
+  h1 {
+    color: $color-text-on-yellow;
+    font-family: $font-sans-serif;
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+    margin-bottom: 0;
+    padding: $measure-large 0 0 $measure-xlarge;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.header_wrapper {
+  background-color: $color-yellow;
+  padding: 0;
+  text-align: center;
+}
+
+.header_image {
+  // height: 150px;
+}
+
+.header_container {
+  width: 100%;
+}
+
+.header_content {
+  color: $color-text-on-yellow;
+  padding: 2 * $measure-xlarge $measure-large;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    color: $color-text-on-yellow;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-heavy;
+    line-height: $line-height-large
+  }
 }
 
 // Adds padding to content - use this instead of paragraphs for consistent padding/margin rendering
