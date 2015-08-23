@@ -56,7 +56,7 @@
 
 .home__packages, .home__share {
   background-color: $color-gallery;
-  background-image: url(/images/temp-abstract-background-white.png);
+  background-image: url(http://cdn.getforge.com/staticray.getforge.io/1440361058/images/abstract-background-white.png);
   background-size: cover;
   padding: 6vh $measure-xlarge;
   text-align: center;
@@ -149,6 +149,10 @@
       color: $color-yellow;
       text-shadow: 0 0 18px rgba($color-yellow, .5);
     }
+  }
+
+  img {
+    padding: $measure-large;
   }
 }
 
