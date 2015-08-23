@@ -3,6 +3,10 @@ Paugme Web
 
 The Paugme Website, built on Laravel.
 
+# Dependencies
+
+* [Laravel Analytics](https://github.com/ipunkt/laravel-analytics)
+
 # Environment
 
 You can set your environment settings in `.env`.
