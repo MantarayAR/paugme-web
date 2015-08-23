@@ -150,6 +150,10 @@
       text-shadow: 0 0 18px rgba($color-yellow, .5);
     }
   }
+
+  img {
+    padding: $measure-large;
+  }
 }
 
 .home__circuit_light_text,

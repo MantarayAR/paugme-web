@@ -1866,6 +1866,10 @@ label {
     .home__circuit_mobile .fa.on {
       color: #fc0;
       text-shadow: 0 0 18px rgba(255, 204, 0, 0.5); }
+  .home__circuit_light img,
+  .home__circuit_circuit img,
+  .home__circuit_mobile img {
+    padding: 9px; }
 
 .home__circuit_light_text,
 .home__circuit_circuit_text,
