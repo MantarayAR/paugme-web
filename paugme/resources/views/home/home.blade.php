@@ -139,11 +139,6 @@
                 </div>
             </div>
             <div class="home__circuit row row-same-height">
-            
-                <div class="home__circuit_circuit column-xs one-third hidden-md hidden-lg hidden-xl">
-                    <!-- Circuit -->
-                    <!-- <div class="fa fa-mobile"> </div>-->
-                </div>
                 <div class="home__circuit_circuit_text column-xs two-thirds">
                     <p>Learn about logic gates and how to store data. We even provide
                     additional activities, like how to build motion sensing circuits.</p>
