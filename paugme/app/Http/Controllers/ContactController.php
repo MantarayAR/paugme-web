@@ -24,6 +24,6 @@ class ContactController extends Controller
         $command = new CreateContactCommand( $contact );
         $this->dispatch( $command );
 
-        return redirect()->to('/thank-you');
+        return redirect()->to('/thank-you-contact');
     }
 }

@@ -9,7 +9,6 @@
     <div class="header__links">
         <ul>
             <li><a href="/about">About</a></li>
-            <li><a href="/sign-up">Sign Up</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
         </ul>
 

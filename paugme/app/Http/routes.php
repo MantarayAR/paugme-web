@@ -28,9 +28,15 @@ Route::get('/contact-us', function() {
 });
 
 Route::post('/contact-us', 'ContactController@store');
+Route::post('/sign-up', 'SignUpController@store');
 
-Route::get('/thank-you', function () {
-    return view('home.thank-you');
+Route::get('/contact-thank-you', function () {
+    return view('home.thank-you-contact');
 });
+
+Route::get('/sign-up-thank-you', function () {
+    return view('home.thank-you-sign-up');
+});
+
 
 Route::get('email/{emailName}', 'EmailController@view');

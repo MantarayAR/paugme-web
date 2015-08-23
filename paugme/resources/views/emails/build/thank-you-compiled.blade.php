@@ -15,16 +15,16 @@
         <td class="container" style="box-sizing: border-box; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 14px; margin: 0 auto; max-width: 580px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 10px; vertical-align: top; width: 580px;">
             <div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 580px; padding: 10px;">
                 <!-- Body -->
-                <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden; width: 0;">Thank you for your message!</span>
+                <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden; width: 0;">{{$thankYouTitle or 'Thank You!'}}</span>
                 <table class="main" style="-premailer-width: 100%; background: #fff; border: 1px solid #bfbfbf; border-collapse: separate; border-radius: 3px; box-sizing: border-box; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                     <tr>
                         <td class="wrapper" style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 14px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 30px; vertical-align: top;">
                             <table style="-premailer-width: 100%; border-collapse: separate; box-sizing: border-box; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                 <tr>
                                     <td style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 14px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; vertical-align: top;">
-                                        <h2 style="color: #333; font-family: 'Open Sans', sans-serif; font-size: 24px; font-weight: 400; margin: 0; margin-bottom: 30px;">Thank you for your message!</h2>
+                                        <h2 style="color: #333; font-family: 'Open Sans', sans-serif; font-size: 24px; font-weight: 400; margin: 0; margin-bottom: 30px;">{{$thankYouTitle or 'Thank You!'}}</h2>
 
-                                        <p style="color: #333; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 100; line-height: 1.44; margin: 0; margin-bottom: 15px;">We will try to get back to you as soon as possible.</p>
+                                        <p style="color: #333; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 100; line-height: 1.44; margin: 0; margin-bottom: 15px;">{{$thankYouMessage or ''}}</p>
 
                                     </td>
                                 </tr>

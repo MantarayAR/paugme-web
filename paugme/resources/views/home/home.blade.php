@@ -13,20 +13,16 @@
 
                     <h2>Educational kits for children</h2>
 
+                    <h3>A new subject shipped to you once a month</h3>
 
-                    <a href="sign-up" class="button button-large">Sign Up for Early Access</a>
+
+                    @include('home._sign-up-form')
                 </div>
             </div>
         </div>
 
         <div class="home__about">
-            <blockquote>
-                <p>&ldquo;Wow, this is a great quote.&rdquo;</p>
-
-                <cite>
-                    <p>- My name should be gray</p>
-                </cite>
-            </blockquote>
+            <p>Pre-orders open up soon!</p>
         </div>
 
         <div class="home__packages">
@@ -36,7 +32,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="http://placehold.it/200x200"/>
+                        <img class="img-responsive" src="/images/circuits-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Circuits</h2>
@@ -59,7 +55,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="http://placehold.it/200x200">
+                        <img class="img-responsive" src="/images/dna-home-icon.png">
                     </div>
                     <div class="column two-thirds">
                         <h2>Biology</h2>
@@ -80,7 +76,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="http://placehold.it/200x200"/>
+                        <img class="img-responsive" src="/images/chemisty-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Chemistry</h2>
@@ -102,7 +98,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="http://placehold.it/200x200"/>
+                        <img class="img-responsive" src="/images/code-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Programming</h2>
@@ -126,7 +122,7 @@
 
         <div class="home__signup">
             <h3>Get a new Paugme Pack delivered to you every month!</h3>
-            <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
+            @include('home._sign-up-form')
         </div>
 
         <div class="home__circuits">
@@ -142,10 +138,10 @@
                 </div>
             </div>
             <div class="home__circuit row row-same-height">
+            
                 <div class="home__circuit_circuit column-xs one-third hidden-md hidden-lg hidden-xl">
                     <!-- Circuit -->
-                    <div class="fa fa-mobile">
-                    </div>
+                    <!-- <div class="fa fa-mobile"> </div>-->
                 </div>
                 <div class="home__circuit_circuit_text column-xs two-thirds">
                     <p>Learn about logic gates and how to store data. We even provide
@@ -153,8 +149,7 @@
                 </div>
                 <div class="home__circuit_circuit column-xs one-third hidden-xs">
                     <!-- Circuit -->
-                    <div class="fa fa-mobile">
-                    </div>
+                    <img src="/images/full-circuit-home-icon.png"/>
                 </div>
             </div>
             <div class="home__circuit row row-same-height">
@@ -188,7 +183,7 @@
             </div>
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="/images/cells-home-icon-yellow.png" />
+                    <img src="/images/plants-home-icon.png" />
 
                     <h3>Plants</h3>
                     <p>Find out what makes a plant a plant and how photosynthesis works</p>
@@ -219,8 +214,9 @@
             </div>
         </div>
         <div class="home__signup">
-            <h3 class="text-center">A new subject every month!</h3>
-            <a href="sign-up" class="button button-xlarge button-yellow text-center">Sign Up for Early Access</a>
+            <h3 class="text-center">Sign up for news and updates!
+            </h3>
+            @include('home._sign-up-form')
         </div>
         <div class="home__share">
             @include('home._share')

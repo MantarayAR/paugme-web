@@ -43,7 +43,7 @@
   padding: 6vh;
   text-align: center;
 
-  blockquote {
+  p, blockquote {
     font-size: $font-size-xlarge;
     font-weight: $font-weight-feather;
   }
@@ -83,8 +83,8 @@
   }
 
   p {
-    font-size: $font-size-medium;
-    font-weight: $font-weight-medium;
+
+    font-size: $font-size-medium + 3;
   }
 
   ul {
@@ -150,6 +150,10 @@
       color: $color-yellow;
       text-shadow: 0 0 18px rgba($color-yellow, .5);
     }
+  }
+
+  img {
+    padding: $measure-large;
   }
 }
 

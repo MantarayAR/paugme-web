@@ -11,6 +11,16 @@ class EmailController extends Controller
 {
     public function view( $emailName ) {
         // TODO filter $emailName
-        return view('emails.build.' . $emailName . '-compiled');
+        $data = [];
+
+        switch ( $emailName ) {
+            case 'thank-you':
+                $data = [
+                    'thankYouTitle' => 'Thank you title goes here',
+                    'thankYouMessage' => 'Thank you message goes here'
+                ];
+        }
+
+        return view('emails.build.' . $emailName . '-compiled', $data);
     }
 }
