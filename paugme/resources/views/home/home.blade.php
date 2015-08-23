@@ -22,7 +22,8 @@
         </div>
 
         <div class="home__about">
-            <p>Pre-orders open up soon!</p>
+            <p>Pre-orders open up in January!</p>
+            <p>The Circuit Pack ships in May!</p>
         </div>
 
         <div class="home__packages">

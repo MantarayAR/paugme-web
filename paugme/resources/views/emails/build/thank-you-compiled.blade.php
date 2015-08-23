@@ -20,7 +20,7 @@
                         <td class="paugme_wrapper" style="background-color: #fc0; border-bottom: 1px solid #333; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 14px; height: 50px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; vertical-align: top;">
                             <div class="paugme_image" style="box-sizing: border-box;">
                             </div>
-                            <h1 style="color: #333; font-family: 'Open Sans', sans-serif; font-size: 24px; font-weight: 300; margin: 0; margin-bottom: 0; padding: 9px 0 0 9px; text-transform: capitalize;"><a href="http://paugme.com/" style="box-sizing: border-box; color: #333; text-decoration: none;">Paugme Packs</a></h1>
+                            <h1 style="color: #333; font-family: 'Open Sans', sans-serif; font-size: 24px; font-weight: 300; margin: 0; margin-bottom: 0; padding: 9px 0 0 30px; text-transform: capitalize;"><a href="http://paugme.com/" style="box-sizing: border-box; color: #333; text-decoration: none;">Paugme Packs</a></h1>
                         </td>
                     </tr>
                     <tr>
