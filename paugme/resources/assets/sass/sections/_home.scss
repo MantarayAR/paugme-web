@@ -9,11 +9,10 @@
   background-color: $color-silver;
   background-image: url(/images/iphone-blurred.jpg);
   background-size: cover;
-  height: 90vh;
 }
 
 .home__welcome_panel {
-  max-height: 90vh;
+  min-height: 90vh;
   padding: 10vh $measure-xlarge;
   text-align: center;
 
