@@ -1740,13 +1740,13 @@ label {
       border-top: 1px solid #ccc; }
 
 .home__welcome {
-  background-color: #ccc;
-  background-image: url(/images/iphone-blurred.jpg);
-  background-size: cover;
-  height: 90vh; }
+  background-color: #546060;
+  background-image: url(http://cdn.getforge.com/staticray.getforge.io/1440356219/images/working-vintage.jpg);
+  background-position: center;
+  background-size: cover; }
 
 .home__welcome_panel {
-  max-height: 90vh;
+  min-height: 90vh;
   padding: 10vh 30px;
   text-align: center; }
   .home__welcome_panel * {
@@ -1774,7 +1774,7 @@ label {
 
 .home__packages, .home__share {
   background-color: #efefef;
-  background-image: url(/images/temp-abstract-background-white.png);
+  background-image: url(http://cdn.getforge.com/staticray.getforge.io/1440361058/images/abstract-background-white.png);
   background-size: cover;
   padding: 6vh 30px;
   text-align: center; }
@@ -1866,6 +1866,10 @@ label {
     .home__circuit_mobile .fa.on {
       color: #fc0;
       text-shadow: 0 0 18px rgba(255, 204, 0, 0.5); }
+  .home__circuit_light img,
+  .home__circuit_circuit img,
+  .home__circuit_mobile img {
+    padding: 9px; }
 
 .home__circuit_light_text,
 .home__circuit_circuit_text,
@@ -2064,6 +2068,26 @@ footer {
   height: 44px;
   vertical-align: middle; }
 
+.header__mobile_button {
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+  float: left;
+  font-size: 32px;
+  margin-left: 9px;
+  margin-right: -9px;
+  margin-top: 3px;
+  padding: 3px 6px;
+  transition: all 0.2s; }
+  .header__mobile_button:hover,
+  .header__mobile_button:active,
+  .header__mobile_button:focus,
+  .header__mobile_button.active {
+    background-color: #fff; }
+  @media (min-width: 768px) {
+    .header__mobile_button {
+      display: none; } }
+
 .header__links {
   margin-right: 30px;
   padding-top: 3px; }
@@ -2073,9 +2097,27 @@ footer {
     margin-top: 3px; }
     @media (max-width: 767px) {
       .header__links ul {
-        display: none; } }
+        background-color: #fc0;
+        box-shadow: 3px 2px 4px rgba(100, 100, 100, 0.8);
+        min-height: 50vh;
+        left: -999px;
+        padding: 30px;
+        position: absolute;
+        top: 48px;
+        width: 50%;
+        z-index: 1;
+        transition: left 0.4s; }
+        .header__links ul.active {
+          left: 0px; }
+        .header__links ul li {
+          display: block;
+          margin-bottom: 6px;
+          text-align: center;
+          width: 100%; } }
     .header__links ul li {
       display: inline-block; }
+      .header__links ul li.active a {
+        background-color: #fff; }
       .header__links ul li a {
         border: 2px solid #333;
         display: block;
