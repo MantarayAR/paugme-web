@@ -66,3 +66,17 @@ sudo supervisorctl update
 
 sudo supervisorctl start laravel-worker:*
 ```
+
+# Assets
+
+Dynamic assets, like Sass and Email templates should be
+included in this repo, however, static assets, such
+as images, and JavaScript dependencies should go in
+[Paugme Static](https://github.com/mantarayar/paugme-static).
+
+Those images will be automatically uploaded to a CDN. Use
+the CDN url when referencing these assets.
+
+Eventually, CDN assets will be added to a database and
+will be referenced from there, but until then, link
+directly to the assets.
