@@ -33,7 +33,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="/images/circuits-home-icon.png"/>
+                        <img class="img-responsive" src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/circuits-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Circuits</h2>
@@ -56,7 +56,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="/images/dna-home-icon.png">
+                        <img class="img-responsive" src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/dna-home-icon.png">
                     </div>
                     <div class="column two-thirds">
                         <h2>Biology</h2>
@@ -77,7 +77,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="/images/chemisty-home-icon.png"/>
+                        <img class="img-responsive" src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/chemistry-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Chemistry</h2>
@@ -99,7 +99,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="/images/code-home-icon.png"/>
+                        <img class="img-responsive" src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/code-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Programming</h2>
@@ -164,14 +164,14 @@
 
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="/images/cells-home-icon.png" />
+                    <img src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/cells-home-icon.png" />
 
                     <h3>Cells</h3>
                     <p>Learn about animal cells and plant cells
                         and how they differ from each other</p>
                 </div>
                 <div class="column-xs one-half">
-                    <img src="/images/food-chain-icon.png" />
+                    <img src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/food-chain-icon.png" />
 
                     <h3>Ecology</h3>
                     <p>Find out how organisms are related to one another</p>
@@ -179,13 +179,13 @@
             </div>
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="/images/plants-home-icon.png" />
+                    <img src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/plants-home-icon.png" />
 
                     <h3>Plants</h3>
                     <p>Find out what makes a plant a plant and how photosynthesis works</p>
                 </div>
                 <div class="column-xs one-half">
-                    <img src="/images/virus-bacteria-icon.png" />
+                    <img src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/virus-bacteria-icon.png" />
 
 
                     <h3>Viruses and Bacteria</h3>
@@ -199,7 +199,7 @@
                 <div class="column-xs one-half">
                     <h3>Chemistry</h3>
 
-                    <img src="/images/beaker-100x100.png" class="home__rest_icon"/>
+                    <img src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/beaker-100x100.png" class="home__rest_icon"/>
 
                 </div>
                 <div class="column-xs one-half">
