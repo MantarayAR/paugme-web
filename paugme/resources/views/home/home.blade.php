@@ -99,7 +99,7 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="http://cdn.getforge.com/staticray.getforge.io/1440361058/images/icons/code-home-icon.png"/>
+                        <img class="img-responsive" src="http://cdn.getforge.com/staticray.getforge.io/1440368621/images/icons/code-home-icon.png"/>
                     </div>
                     <div class="column two-thirds">
                         <h2>Programming</h2>
