@@ -6,6 +6,8 @@ use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use App\Handlers\Events\NotifyAdministratorsOfNewContact;
 use App\Handlers\Events\ThankContactSender;
+use App\Handlers\Events\NotifyAdministratorsOfNewSignUp;
+use App\Handlers\Events\ThankSignUpSender;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -18,6 +20,10 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\ContactWasCreatedEvent' => [
             NotifyAdministratorsOfNewContact::class,
             ThankContactSender::class,
+        ],
+        'App\Events\SignUpWasCreatedEvent' => [
+            NotifyAdministratorsOfNewSignUp::class,
+            ThankSignUpSender::class,
         ],
     ];
 
