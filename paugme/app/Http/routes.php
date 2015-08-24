@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Redis;
+
 Route::get('/', function () {
     return view('home.home');
 });
@@ -39,6 +41,5 @@ Route::get('/sign-up-thank-you', function () {
     Analytics::trackEvent('conversion', 'sign-up');
     return view('home.thank-you-sign-up');
 });
-
 
 Route::get('email/{emailName}', 'EmailController@view');
