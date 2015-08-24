@@ -1741,7 +1741,7 @@ label {
 
 .home__welcome {
   background-color: #546060;
-  background-image: url(http://cdn.getforge.com/staticray.getforge.io/1440356219/images/working-vintage.jpg);
+  background-image: url(https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/working-vintage.jpg);
   background-position: center;
   background-size: cover; }
 
@@ -1774,7 +1774,7 @@ label {
 
 .home__packages, .home__share {
   background-color: #efefef;
-  background-image: url(http://cdn.getforge.com/staticray.getforge.io/1440361058/images/abstract-background-white.png);
+  background-image: url(https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/abstract-background-white.png);
   background-size: cover;
   padding: 6vh 30px;
   text-align: center; }
