@@ -5,6 +5,7 @@ namespace App\Handlers\Events;
 use App\Events\SignUpWasCreatedEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Mail;
 
 class ThankSignUpSender implements ShouldQueue
 {
