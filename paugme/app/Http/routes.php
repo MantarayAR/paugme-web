@@ -43,3 +43,33 @@ Route::get('/sign-up-thank-you', function () {
 });
 
 Route::get('email/{emailName}', 'EmailController@view');
+
+/*
+|------------------------------------------------------
+| Blog Routes
+|------------------------------------------------------
+|
+| Routes for controlling the blog
+|
+*/
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@showPost');
+
+/*
+|------------------------------------------------------
+| Test Routes
+|------------------------------------------------------
+|
+| Put volatile routes here. These can come and go in an
+| instant, so don't rely on them!
+|
+*/
+Route::get('test/config', function () {
+    $redis = Redis::connection();
+
+    $redis->set('name', 'Taylor');
+
+    $name = $redis->get('name');
+
+    dd( $name );
+});
