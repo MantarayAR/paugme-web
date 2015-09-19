@@ -1804,6 +1804,17 @@ label {
 .input-group.multiline label {
   display: block; }
 
+.list-group {
+  background-color: #fff;
+  display: block;
+  margin: 9px 0;
+  min-width: 300px; }
+  .list-group li {
+    display: block;
+    padding: 9px 6px; }
+    .list-group li + li {
+      border-top: 1px solid #ccc; }
+
 .sidebar-nav {
   border: 2px solid #333;
   display: inline-block;
@@ -1848,16 +1859,23 @@ label {
     font-weight: 400;
     line-height: 1.44; }
 
-.list-group {
-  background-color: #fff;
-  display: block;
-  margin: 9px 0;
-  min-width: 300px; }
-  .list-group li {
-    display: block;
-    padding: 9px 6px; }
-    .list-group li + li {
-      border-top: 1px solid #ccc; }
+table {
+  max-width: 100%;
+  width: 100%; }
+  table.table-bordered {
+    border: 1px solid #333; }
+    table.table-bordered > thead > tr > th,
+    table.table-bordered > thead > tr > td,
+    table.table-bordered > tbody > tr > th,
+    table.table-bordered > tbody > tr > td,
+    table.table-bordered > tfoot > tr > th,
+    table.table-bordered > tfoot > tr > td {
+      border: 1px solid #333; }
+    table.table-bordered > thead > tr > th,
+    table.table-bordered > thead > tr > td {
+      border-bottom-width: 2px; }
+  table.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #efefef; }
 
 .home__welcome {
   background-color: #546060;
