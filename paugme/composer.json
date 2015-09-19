@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "guzzlehttp/guzzle": "~5.3|~6.0",
         "predis/predis": "~1.0",
-        "ipunkt/laravel-analytics": "^1.1"
+        "ipunkt/laravel-analytics": "^1.1",
+        "graham-campbell/markdown": "^4.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

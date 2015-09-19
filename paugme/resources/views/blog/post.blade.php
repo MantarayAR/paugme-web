@@ -5,13 +5,16 @@
 @stop
 
 @section('content')
-    <h1>{{ $post->title }}</h1>
-    <h5>{{ $post->published_at->format('M jS Y g:ia') }}</h5>
-    <hr>
-    {!! nl2br(e($post->content)) !!}
-    <hr>
-    <button class="btn btn-primary" onclick="history.go(-1)">
-        &laquo; Back
-    </button>
-
+    <div class="blog__content">
+        <h2>{{ $post->title }}</h2>
+        <span class="blog__post__date">{{ $post->published_at->format('M jS Y g:ia') }}</span>
+        <hr>
+        <div class="blog__posts">
+            <div class="blog__post">
+                <div class="blog__post__content">
+                    {!! PostRenderer::render( $post ) !!}
+                </div>
+            </div>
+        </div>
+    </div>
 @stop

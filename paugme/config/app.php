@@ -146,6 +146,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Illuminate\Html\HtmlServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
     ],
 
     /*
@@ -196,6 +197,8 @@ return [
         'Form'      => Illuminate\Html\FormFacade::class,
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
+        'PostRenderer' => App\Providers\PostRenderer::class,
     ],
 
 ];

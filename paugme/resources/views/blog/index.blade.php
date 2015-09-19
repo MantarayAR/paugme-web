@@ -5,20 +5,24 @@
 @stop
 
 @section('content')
-    <h1>{{ config('blog.title') }}</h1>
-    <h5>Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}</h5>
-    <hr>
-    <ul>
-        @foreach ($posts as $post)
-            <li>
-                <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a>
-                <em>({{ $post->published_at->format('M jS Y g:ia') }})</em>
-                <p>
-                    {{ str_limit($post->content) }}
-                </p>
-            </li>
-        @endforeach
-    </ul>
-    <hr>
-    {!! $posts->render() !!}
+    <div class="blog__content">
+        <h1>{{ config('blog.title') }}</h1>
+        <div class="blog__content__page">
+            Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}
+        </div>
+        <hr>
+        <div class="blog__posts">
+            @foreach ($posts as $post)
+                <div class="blog__post">
+                    <h2><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h2>
+                    <span class="blog__post__date">{{ $post->published_at->format('M jS Y g:ia') }}</span>
+                    <div class="blog__post__content">
+                        {!! PostRenderer::render( $post ) !!}
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <hr>
+        {!! $posts->render() !!}
+    </div>
 @stop

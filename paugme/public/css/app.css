@@ -2139,3 +2139,38 @@ footer {
 .headroom--unpinned {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%); }
+
+.blog__content {
+  padding: 10vh 20vh; }
+  @media (max-width: 1199px) {
+    .blog__content {
+      padding: 5vh 10vh; } }
+  @media (max-width: 991px) {
+    .blog__content {
+      padding: 1vh 5vh; } }
+
+.blog__posts {
+  max-width: 700px; }
+
+.blog__post {
+  padding-top: 25px;
+  margin-bottom: 25px; }
+  .blog__post h2 {
+    font-size: 24px;
+    margin-bottom: 9px; }
+    .blog__post h2 a {
+      text-decoration: none; }
+  .blog__post + .blog__post {
+    border-top: 1px solid #efefef; }
+
+.blog__post__date {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300; }
+
+.blog__post__content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.44;
+  margin-top: 30px; }
