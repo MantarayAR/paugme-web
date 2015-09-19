@@ -3,9 +3,9 @@
 <head>
     <title>
         @if (trim($__env->yieldContent('title')))
-            @yield('title') - Paugme Packs
+            @yield('title') - Admin
         @else
-            Paugme Packs
+            Admin
         @endif
     </title>
 
@@ -14,6 +14,7 @@
           type='text/css'>
     <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="/css/app.css" rel="stylesheet" type="text/css">
+    <link href="/css/admin.css" rel="stylesheet" type="text/css">
     @yield('head')
     @include('partials._favicon')
 
@@ -21,10 +22,17 @@
     <script src="/js/vendor/html5shiv.min.js"></script>
     <![endif]-->
 </head>
-<body>{{! Analytics::render() }}
-
+<body>
 @include('partials._header')
-@yield('content')
+
+<div class="row row-same-height">
+    <div class="column-sm one-quarter">
+        @include('admin.partials.sidebar')
+    </div>
+    <div class="column-sm three-quarters">
+        @yield('content')
+    </div>
+</div>
 @include('partials._footer')
 <script src="/js/vendor/jquery-1.11.3.min.js"></script>
 <script src="/js/vendor/headroom-0.7.0.min.js"></script>

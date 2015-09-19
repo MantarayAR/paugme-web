@@ -11,8 +11,14 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        App\Post::truncate();
+        DB::statement("TRUNCATE TABLE users CASCADE");
 
+        App\User::create([
+            'name' => 'tester',
+            'email' => 'test@test.com',
+            'password' => bcrypt('secret'),
+            'remember_token' => str_random(10),
+        ]);
         factory(App\User::class, 1)->create();
     }
 }

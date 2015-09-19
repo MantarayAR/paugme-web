@@ -42,7 +42,8 @@ elixir.extend('emails', function () {
 
 elixir(function(mix) {
     mix.sass([
-        'app.scss'
+        'app.scss',
+        'admin.scss',
     ]);
 
     mix.sass([

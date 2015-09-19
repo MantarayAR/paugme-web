@@ -57,6 +57,28 @@ Route::get('blog/{slug}', 'BlogController@showPost');
 
 /*
 |------------------------------------------------------
+| Administration Routes
+|------------------------------------------------------
+|
+| Routes for the admin area
+|
+*/
+Route::group([
+    'namespace' => 'Admin',
+    'middleware' => 'auth',
+], function () {
+    get('admin', 'AdminController@index');
+    resource('admin/post', 'PostController');
+    resource('admin/tag', 'TagController');
+    get('admin/upload', 'UploadController@index');
+});
+Route::get('/auth/login', 'Auth\AuthController@getLogin');
+Route::post('/auth/login', 'Auth\AuthController@postLogin');
+Route::get('/auth/logout', 'Auth\AuthController@getLogout');
+
+
+/*
+|------------------------------------------------------
 | Test Routes
 |------------------------------------------------------
 |

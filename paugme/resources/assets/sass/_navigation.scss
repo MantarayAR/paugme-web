@@ -1,0 +1,33 @@
+.sidebar-nav {
+  border: 2px solid $color-black;
+  display: inline-block;
+  margin: $measure-large;
+
+  li {
+    display: block;
+
+    a {
+      display: block;
+      padding: $measure-large $measure-xlarge;
+      text-decoration: none;
+
+      transition: all .2s;
+
+      &:hover,
+      &:active,
+      &.active {
+        background-color: $color-gallery;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $color-gallery;
+      }
+    }
+  }
+  & li + li {
+    border-top: 1px solid $color-black;
+  }
+}
+

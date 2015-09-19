@@ -12,6 +12,7 @@
 
     <div class="header__links">
         <ul data-is="mobile-menu">
+            <li class="{{Request::is('blog/*') || Request::is('blog') ? 'active' : ''}}"><a href="/blog">Blog</a></li>
             <li class="{{Request::path() == 'about' ? 'active' : ''}}"><a href="/about">About</a></li>
             <li class="{{Request::path() == 'contact-us' ? 'active' : ''}}"><a href="/contact-us">Contact Us</a></li>
         </ul>

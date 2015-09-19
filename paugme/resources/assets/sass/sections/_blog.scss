@@ -1,18 +1,11 @@
 
 .blog__content {
-  padding: 10vh 20vh;
+  margin: auto;
+  max-width: 35em;
 
-  @media( max-width: $screen-md-max ) {
-    padding: 5vh 10vh;
+  @media(max-width: $screen-sm-max) {
+    padding: 1vh 3vh;
   }
-
-  @media( max-width: $screen-sm-max ) {
-    padding: 1vh 5vh;
-  }
-}
-
-.blog__posts {
-  max-width: 700px;
 }
 
 .blog__post {
@@ -40,9 +33,14 @@
 }
 
 .blog__post__content {
-  font-family: $font-sans-serif;
+  font-family: $font-serif;
   font-size: $font-size-medium;
   font-weight: $font-weight-light;
   line-height: $line-height-large;
   margin-top: $measure-xlarge;
+
+
+  p {
+    @include readable;
+  }
 }
