@@ -2354,6 +2354,8 @@ footer {
   float: left;
   padding: 6px;
   text-decoration: none; }
+  .admin__toolbar__button + .admin__toolbar__button {
+    margin-left: 6px; }
 
 /*
  * Tags

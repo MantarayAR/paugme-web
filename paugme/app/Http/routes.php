@@ -25,7 +25,7 @@ Route::get('/about', function () {
     return view('home.about');
 });
 
-Route::get('/contact-us', function() {
+Route::get('/contact-us', function () {
     return view('home.contact-us');
 });
 
@@ -68,10 +68,21 @@ Route::group([
     'middleware' => 'auth',
 ], function () {
     get('admin', 'AdminController@index');
+
     resource('admin/post', 'PostController');
+
     resource('admin/tag', 'TagController', ['except' => 'show']);
     get('admin/tag/{id}/delete', 'TagController@delete');
+
     get('admin/upload', 'UploadController@index');
+    get('admin/upload/file', 'UploadController@createFile');
+    get('admin/upload/file/delete', 'UploadController@deleteFile');
+    post('admin/upload/file', 'UploadController@uploadFile');
+    delete('admin/upload/file', 'UploadController@destroyFile');
+    get('admin/upload/folder', 'UploadController@createFolder');
+    get('admin/upload/folder/delete', 'UploadController@deleteFolder');
+    post('admin/upload/folder', 'UploadController@uploadFolder');
+    delete('admin/upload/folder', 'UploadController@destroyFolder');
 });
 Route::get('/auth/login', 'Auth\AuthController@getLogin');
 Route::post('/auth/login', 'Auth\AuthController@postLogin');
@@ -94,5 +105,5 @@ Route::get('test/config', function () {
 
     $name = $redis->get('name');
 
-    dd( $name );
+    dd($name);
 });

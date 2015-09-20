@@ -21,6 +21,10 @@
   float: left;
   padding: $measure-normal;
   text-decoration: none;
+
+  & + & {
+    margin-left: $measure-normal;
+  }
 }
 
 /*

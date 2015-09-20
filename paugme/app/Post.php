@@ -12,9 +12,8 @@ class Post extends Model
     public function setTitleAttributes($value) {
         $this->attributes['title'] = $value;
 
-        // TODO what guarantees uniqueness?
         if ( ! $this->exists ) {
-            $this->attributes['slug'] = str_slug( $value );
+            $this->attributes['slug'] = SlugService::getUniqueSlug( $value );
         }
     }
 

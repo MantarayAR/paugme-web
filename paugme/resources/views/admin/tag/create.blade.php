@@ -12,10 +12,8 @@
 
                 @include('admin.tag._form')
 
-                <div class="modal-footer">
-                    {!! Form::submit('Add New Tag', array('class' => 'button button-primary')) !!}
-                    {!! Form:: close() !!}
-                </div>
+                {!! Form::submit('Add New Tag', array('class' => 'button button-primary')) !!}
+                {!! Form:: close() !!}
             </div>
 
         </div>
