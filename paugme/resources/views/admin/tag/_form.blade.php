@@ -24,6 +24,6 @@
 </div>
 <div class="input-group">
     {!! Form::label('Reverse Direction') !!}
-    {!! Form::hidden('reverse_direction') !!}
+    {!! Form::hidden('reverse_direction', '0') !!}
     {!! Form::checkbox('reverse_direction') !!} Reverse
 </div>

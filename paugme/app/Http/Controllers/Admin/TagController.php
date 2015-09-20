@@ -98,7 +98,7 @@ class TagController extends Controller
 
         $tag->save();
 
-        return redirct('/admin/tag/' . $id . '/edit')->withSuccess('Changes saved.');
+        return redirect('/admin/tag/' . $id . '/edit')->withSuccess('Changes saved.');
     }
 
     public function delete($id)
