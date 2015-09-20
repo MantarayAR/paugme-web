@@ -76,13 +76,6 @@
                                 <i class="fa fa-times-circle fa-lg"></i>
                                 Delete
                             </a>
-                            @if (FileService::isImage($file['mimeType']))
-                                <button type="button" class="btn btn-xs btn-success"
-                                        onclick="preview_image('{{ $file['webPath'] }}')">
-                                    <i class="fa fa-eye fa-lg"></i>
-                                    Preview
-                                </button>
-                            @endif
                         </td>
                     </tr>
                 @endforeach

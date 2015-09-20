@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Dflydev\ApacheMimeTypes\PhpRepository;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Finder\SplFileInfo;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class UploadsManager
@@ -173,13 +174,18 @@ class UploadsManager
     public function saveFile(UploadedFile $file, $path, $filename)
     {
         $path = $this->cleanFolder($path);
-        $path = $path . '/' . $filename;
 
-        if ($this->disk->exists($path)) {
+        if ($this->disk->exists($path . '/' . $filename)) {
             return 'File already exists.';
         }
 
-        return $this->disk->put( $path, $file );
+        try {
+            $file->move(storage_path() . config('blog.uploads.webpath') . $path, $filename);
+        } catch (FileException $e) {
+            return $e->getMessage();
+        }
+
+        return true;
     }
 
     /**

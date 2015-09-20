@@ -46,6 +46,17 @@ Route::get('email/{emailName}', 'EmailController@view');
 
 /*
 |------------------------------------------------------
+| Resource Routes
+|------------------------------------------------------
+|
+| Routes for images and resources
+|
+*/
+Route::get(rtrim(config('blog.uploads.webpath'), '/') . '/{name}', 'UploadController@index')
+->where(['name' => '.*']);
+
+/*
+|------------------------------------------------------
 | Blog Routes
 |------------------------------------------------------
 |
