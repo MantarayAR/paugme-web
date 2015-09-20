@@ -12,7 +12,8 @@ use Carbon\Carbon;
 class BlogController extends Controller
 {
     public function index() {
-        $posts = Post::where('published_at', '<=', Carbon::now())
+        $posts = Post::with(['author'])
+            ->where('published_at', '<=', Carbon::now())
             ->orderBy('published_at', 'desc')
             ->paginate(config('blog.posts_per_page'));
 
@@ -21,7 +22,10 @@ class BlogController extends Controller
 
     public function showPost($slug) {
         $post = Post::whereSlug($slug)->firstOrFail();
+        $user = Post::whereId($post->author_id)->firstOrFail();
 
-        return view('blog.post')->withPost($post);
+        return view('blog.post')
+            ->withPost($post)
+            ->withAuthor($user);
     }
 }

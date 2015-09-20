@@ -14,10 +14,19 @@
         <div class="blog__posts">
             @foreach ($posts as $post)
                 <div class="blog__post">
+                    <div class="author__card">
+                        <div><a href="/blog/author/{{ $post->author->slug }}">{{ $post->author->name }}</a></div>
+                        <span class="blog__post__date">{{ $post->published_at->format('M jS Y g:ia') }}</span>
+                    </div>
                     <h2><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h2>
-                    <span class="blog__post__date">{{ $post->published_at->format('M jS Y g:ia') }}</span>
+
                     <div class="blog__post__content">
-                        {!! PostRenderer::render( $post ) !!}
+                        {!! PostRenderer::render( $post, [ 'truncate' => true ] ) !!}
+                    </div>
+
+                    <div class="blog__post__read-more">
+                        <a href="/blog/{{$post->slug}}">Read More</a>
+                        <span class="blog__post__time">{{$post->timeToRead()}}</span>
                     </div>
                 </div>
             @endforeach

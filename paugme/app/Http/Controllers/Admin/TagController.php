@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagCreateRequest;
 use App\Tag;
 
 class TagController extends Controller
@@ -29,7 +30,15 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        $fields = Tag::fields();
+
+        $data = [];
+
+        foreach($fields as $field => $default) {
+            $data[$field] = old($field, $default);
+        }
+
+        return view('admin.tag.create')->withTag($fields);
     }
 
     /**
@@ -38,21 +47,19 @@ class TagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TagCreateRequest $request)
     {
-        //
+        $tag = new Tag();
+        $fields = Tag::fields();
+
+        foreach ( array_keys($fields) as $field ) {
+            $tag->$field = $request->get($field);
+        }
+
+        $tag->save();
+        return redirect('/admin/tag')->withSuccess("The tag '$tag->tag' was created.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -62,7 +69,15 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tag = Tag::findOrFail($id);
+        $data = ['id' => $id];
+        $fields = Tag::fields();
+
+        foreach( array_keys( $fields ) as $field ) {
+            $data[$field] = old($field, $tag->$field);
+        }
+
+        return view('admin.tag.edit')->withTag( $data );
     }
 
     /**
@@ -74,7 +89,22 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tag = Tag::findOrFail($id);
+        $fields = Tag::fields();
+
+        foreach ( array_keys( $fields ) as $field ) {
+            $tag->$field = $request->get($field);
+        }
+
+        $tag->save();
+
+        return redirct('/admin/tag/' . $id . '/edit')->withSuccess('Changes saved.');
+    }
+
+    public function delete($id)
+    {
+        $tag = Tag::findOrFail($id);
+        return view('admin.tag.delete')->withTag($tag);
     }
 
     /**
@@ -85,6 +115,9 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tag = Tag::findOrFail($id);
+        $tag->delete();
+
+        return redirect('/admin/tag')->withSuccess("The tag '$tag->tag' was deleted.");
     }
 }

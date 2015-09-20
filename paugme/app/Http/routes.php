@@ -69,7 +69,8 @@ Route::group([
 ], function () {
     get('admin', 'AdminController@index');
     resource('admin/post', 'PostController');
-    resource('admin/tag', 'TagController');
+    resource('admin/tag', 'TagController', ['except' => 'show']);
+    get('admin/tag/{id}/delete', 'TagController@delete');
     get('admin/upload', 'UploadController@index');
 });
 Route::get('/auth/login', 'Auth\AuthController@getLogin');

@@ -46,6 +46,10 @@
                                class="btn btn-xs btn-info">
                                 <i class="fa fa-edit"></i> Edit
                             </a>
+                            <a href="/admin/tag/{{ $tag->id }}/delete"
+                               class="btn btn-xs btn-info">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
                         </td>
                     </tr>
                 @endforeach
