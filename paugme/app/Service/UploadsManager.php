@@ -155,7 +155,7 @@ class UploadsManager
     {
         $path = $this->cleanFolder($path);
 
-        if (!$this->disk->exist($path)) {
+        if (!$this->disk->exists($path)) {
             return 'File does not exist.';
         }
 

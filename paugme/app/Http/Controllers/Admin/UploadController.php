@@ -59,15 +59,33 @@ class UploadController extends Controller
 
     }
 
-    public function deleteFile($file)
+    public function deleteFile(Request $request)
     {
+        $name   = $request->get('name');
+        $folder = $request->get('folder');
+
         return view('admin.upload.delete-file')
-            ->withFile($file);
+            ->withName($name)
+            ->withFolder($folder);
     }
 
-    public function destroyFile($name)
+    public function destroyFile(Request $request)
     {
-        // TODO
+        $name = $request->get('name');
+        $folder = $request->get('folder');
+        $path = $folder . '/' . $name;
+
+        $result = $this->manager->deleteFile($path);
+
+        if ( $result === true ) {
+            return redirect()->action('Admin\UploadController@index')
+                ->withSuccess("File '$path' was deleted.");
+        }
+
+        $error = $result ?: 'An error occurred when deleting the file';
+
+        return redirect()->action('Admin\UploadController@deleteFile', ['name' => $name, 'folder' => $folder ] )
+            ->withErrors([$error]);
     }
 
     public function createFolder(Request $request)

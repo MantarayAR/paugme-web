@@ -72,7 +72,7 @@
                         <td>{{ $file['modified']->format('j-M-y g:ia') }}</td>
                         <td>{{ FileService::humanFilesize($file['size']) }}</td>
                         <td>
-                            <a type="button" class="button" href="/admin/upload/file/delete">
+                            <a type="button" class="button" href="/admin/upload/file/delete?folder={{$folder}}&name={{$file['name']}}">
                                 <i class="fa fa-times-circle fa-lg"></i>
                                 Delete
                             </a>
