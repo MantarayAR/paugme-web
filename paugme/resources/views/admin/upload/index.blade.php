@@ -60,7 +60,7 @@
                     <tr>
                         <td>
                             <a href="{{ $file['webPath'] }}">
-                                @if (FileService::isImage($file['mimeType']))
+                                @if (FileHelper::isImage($file['mimeType']))
                                     <i class="fa fa-file-image-o fa-lg fa-fw"></i>
                                 @else
                                     <i class="fa fa-file-o fa-lg fa-fw"></i>
@@ -70,7 +70,7 @@
                         </td>
                         <td>{{ $file['mimeType'] or 'Unknown' }}</td>
                         <td>{{ $file['modified']->format('j-M-y g:ia') }}</td>
-                        <td>{{ FileService::humanFilesize($file['size']) }}</td>
+                        <td>{{ FileHelper::humanFilesize($file['size']) }}</td>
                         <td>
                             <a type="button" class="button" href="/admin/upload/file/delete?folder={{$folder}}&name={{$file['name']}}">
                                 <i class="fa fa-times-circle fa-lg"></i>

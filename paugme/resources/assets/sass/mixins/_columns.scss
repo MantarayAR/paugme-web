@@ -12,7 +12,7 @@
   [class*=" column"]#{$name} {
     width: ( $stretch_columns * $column_space ) + ( $stretch_gutters * $gutter_space );
 
-    .row-same-height & {
+    .row-same-height > & {
       width: $percentage_width * 100%;
     }
   }

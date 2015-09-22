@@ -199,7 +199,7 @@ return [
         'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,
         'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
         'PostRenderer' => App\Providers\PostRenderer::class,
-        'FileService' => App\Services\FileService::class,
+        'FileService' => App\Helpers\FileHelper::class,
     ],
 
 ];

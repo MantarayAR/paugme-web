@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Helpers;
 
-class FileService
+class FileHelper
 {
     public static function humanFilesize($bytes, $decimals = 2)
     {
