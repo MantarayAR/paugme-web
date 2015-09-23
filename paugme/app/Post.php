@@ -4,6 +4,7 @@ namespace App;
 
 use App\Helpers\SlugHelper;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Post extends Model
 {
@@ -13,6 +14,74 @@ class Post extends Model
     ];
     protected $dates = ['published_at'];
 
+    /**
+     * Return url to post
+     *
+     * @param Tag|null $tag
+     * @return string
+     */
+    public function url(Tag $tag = null)
+    {
+        $url = url('blog/' . $this->slug);
+        if ($tag) {
+            $url .= '?tag=' . urlencode($tag->tag);
+        }
+
+        return $url;
+    }
+
+    public function tagLinks($base = '/blog?tag=%TAG%')
+    {
+        $tags = $this->tags()->lists('tag');
+        $return = [];
+        foreach ($tags as $tag) {
+            $url = str_replace('%TAG%', urlencode($tag), $base);
+            $return[] = '<a href="' . $url . '">' . e($tag) . '</a>';
+        }
+
+        return $return;
+    }
+
+    /**
+     * Return next post after this one or null
+     *
+     * @param Tag|null $tag
+     * @return mixed
+     */
+    public function newerPost(Tag $tag = null)
+    {
+        $query = static::where('published_at', '>', $this->published_at)
+            ->where('published_at', '<=', Carbon::now())
+            ->where('is_draft', 0)
+            ->orderBy('published_at', 'asc');
+        if ($tag) {
+            $query = $query->whereHas('tags', function ($q) use ($tag) {
+                $q->where('tag', '=', $tag->tag);
+            });
+        }
+
+        return $query->first();
+    }
+
+    public function olderPost(Tag $tag = null)
+    {
+        $query = static::where('published_at', '<', $this->published_at)
+            ->where('is_draft', 0)
+            ->orderBy('published_at', 'desc');
+        if ($tag) {
+            $query = $query->whereHas('tags', function ($q) use ($tag) {
+                $q->where('tag', '=', $tag->tag);
+            });
+        }
+
+        return $query->first();
+    }
+
+    /**
+     * Set the slug when setting the title attribute
+     *
+     * @param $value
+     */
     public function setTitleAttribute($value)
     {
         $this->attributes['title'] = $value;

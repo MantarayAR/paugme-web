@@ -1,0 +1,38 @@
+.modal {
+  background-color: rgba( $color-black, 0.2 );
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .modal-content {
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    top: 20vh;
+    position: relative;
+    background-color: $color-white;
+    border: 1px solid $color-gallery;
+    box-shadow: 1px 1px 1px $color-black;
+  }
+
+  .modal-close {
+    float: right;
+  }
+  .modal-title {
+    border-bottom: 1px solid $color-gallery;
+    padding: 10px;
+  }
+
+  .modal-body {
+    padding: 20px 10px;
+  }
+
+  .modal-footer {
+    padding: 10px;
+    border-top: 1px solid $color-gallery;
+  }
+}

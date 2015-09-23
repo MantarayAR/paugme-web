@@ -19,6 +19,7 @@
     </div>
     <div class="column one-third">
         {!! Form::submit('Save Post', ['class' => 'button button-block']) !!}
+        <a class="button button-block button-danger" href="#" data-show="showDeleteButton" data-action="showDeleteModal">Delete</a>
 
         <div class="input-group multiline">
             {!! Form::label('Publish Date') !!}

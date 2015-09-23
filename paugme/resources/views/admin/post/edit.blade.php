@@ -15,6 +15,8 @@
                 @include('admin.post._form')
 
                 {!! Form::close() !!}
+
+                @include('admin.post._delete-modal')
             </div>
         </div>
     </div>
@@ -23,5 +25,9 @@
 @section('scripts')
     <script>
         // TODO data pickers
+
+        window.postId = '{{$post['id']}}';
     </script>
+
+    <script src="/js/admin.js"></script>
 @stop

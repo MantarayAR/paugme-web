@@ -53,6 +53,10 @@ elixir(function(mix) {
     mix.emails();
 
     mix.scripts([
+        '_admin.js'
+    ], 'public/js/admin.js');
+
+    mix.scripts([
         '_lightbulb.js'
     ], 'public/js/home.js');
 

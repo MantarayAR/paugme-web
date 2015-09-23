@@ -21,7 +21,7 @@ class HtmlHelper
      * @param $value string
      * @return string
      */
-    public function page_image($value = null)
+    public static function page_image($value = null)
     {
         if (empty($value)) {
             $value = config('blog.page_image');

@@ -200,6 +200,7 @@ return [
         'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
         'PostRenderer' => App\Providers\PostRenderer::class,
         'FileService' => App\Helpers\FileHelper::class,
+        'HtmlHelper' => App\Helpers\HtmlHelper::class,
     ],
 
 ];

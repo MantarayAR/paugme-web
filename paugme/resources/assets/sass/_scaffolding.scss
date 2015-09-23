@@ -201,6 +201,10 @@ img {
 // Hidden
 //
 // Styleguide 2.6
+.hidden {
+  display: none !important;
+}
+
 .hidden-xs {
   @media(max-width: $screen-xs-max) {
     display: none !important;
