@@ -6,6 +6,7 @@ The Paugme Website, built on Laravel.
 # Dependencies
 
 * [Laravel Analytics](https://github.com/ipunkt/laravel-analytics)
+* Dropbox - The database will be automatically backed up to dropbox
 
 # Environment
 
@@ -41,6 +42,8 @@ service is used for contact forms.
 
 # Production Deployment
 
+## Setting Up Work Queues
+
 Install supervisor
 
 ```
@@ -69,6 +72,16 @@ sudo supervisorctl reread
 sudo supervisorctl update
 
 sudo supervisorctl start laravel-worker:*
+```
+
+## Setting Up Database Dump Cron Job
+
+[See shockandawe.me for more details](http://shockandawe.me/2015/09/02/automatic-database-backup-for-laravel-to-dropbox.html).
+
+Run `crontab -e` (Choose `vi` if this is the first time you are running it). Add:
+
+```
+0 0 * * * php /path/to/artisan db:backup --database=pgsql --destination=dropbox --destinationPath=`date +\%s`-paugme.sql --compression=null
 ```
 
 # Assets
