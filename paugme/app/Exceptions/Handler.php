@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Ipunkt\LaravelAnalytics\AnalyticsFacade;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -39,6 +40,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+        $debug = config('app.debug', false);
+
+//        if ( $debug) {
+//            return (new SymfonyDisplayer($debug))->createResponse($e);
+//        }
+        AnalyticsFacade::trackEvent('error', get_class( $e ) . '@' . $e->getMessage());
+        return response()->view('errors.default', ['exception' => $e], 500);
     }
+
 }
