@@ -25,7 +25,7 @@ Route::get('/about', function () {
     return view('home.about');
 });
 
-Route::get('/contact-us', function() {
+Route::get('/contact-us', function () {
     return view('home.contact-us');
 });
 
@@ -43,3 +43,78 @@ Route::get('/sign-up-thank-you', function () {
 });
 
 Route::get('email/{emailName}', 'EmailController@view');
+
+/*
+|------------------------------------------------------
+| Resource Routes
+|------------------------------------------------------
+|
+| Routes for images and resources
+|
+*/
+Route::get(rtrim(config('blog.uploads.webpath'), '/') . '/{name}', 'UploadController@index')
+->where(['name' => '.*']);
+
+/*
+|------------------------------------------------------
+| Blog Routes
+|------------------------------------------------------
+|
+| Routes for controlling the blog
+|
+*/
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@showPost');
+
+/*
+|------------------------------------------------------
+| Administration Routes
+|------------------------------------------------------
+|
+| Routes for the admin area
+|
+*/
+Route::group([
+    'namespace' => 'Admin',
+    'middleware' => 'auth',
+], function () {
+    get('admin', 'AdminController@index');
+
+    resource('admin/post', 'PostController', ['except' => 'show']);
+
+    resource('admin/tag', 'TagController', ['except' => 'show']);
+    get('admin/tag/{id}/delete', 'TagController@delete');
+
+    get('admin/upload', 'UploadController@index');
+    get('admin/upload/file', 'UploadController@createFile');
+    get('admin/upload/file/delete', 'UploadController@deleteFile');
+    post('admin/upload/file', 'UploadController@uploadFile');
+    delete('admin/upload/file', 'UploadController@destroyFile');
+    get('admin/upload/folder', 'UploadController@createFolder');
+    get('admin/upload/folder/delete', 'UploadController@deleteFolder');
+    post('admin/upload/folder', 'UploadController@uploadFolder');
+    delete('admin/upload/folder', 'UploadController@destroyFolder');
+});
+Route::get('/auth/login', 'Auth\AuthController@getLogin');
+Route::post('/auth/login', 'Auth\AuthController@postLogin');
+Route::get('/auth/logout', 'Auth\AuthController@getLogout');
+
+
+/*
+|------------------------------------------------------
+| Test Routes
+|------------------------------------------------------
+|
+| Put volatile routes here. These can come and go in an
+| instant, so don't rely on them!
+|
+*/
+Route::get('test/config', function () {
+    $redis = Redis::connection();
+
+    $redis->set('name', 'Taylor');
+
+    $name = $redis->get('name');
+
+    dd($name);
+});

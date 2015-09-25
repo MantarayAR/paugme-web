@@ -5,6 +5,19 @@ var headroom  = new Headroom(headroomEl, {
 headroom.init();
 
 /**
+ * Modals
+ */
++function ($) {
+    $(function () {
+        $('[data-dismiss=modal]').click(function (e) {
+            e.preventDefault();
+
+            $(this).closest('.modal').hide();
+        })
+    });
+}(jQuery);
+
+/**
  *  Mobile Menu
  */
 +function ($) {

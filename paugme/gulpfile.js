@@ -42,7 +42,8 @@ elixir.extend('emails', function () {
 
 elixir(function(mix) {
     mix.sass([
-        'app.scss'
+        'app.scss',
+        'admin.scss',
     ]);
 
     mix.sass([
@@ -50,6 +51,10 @@ elixir(function(mix) {
     ], email_css_path);
 
     mix.emails();
+
+    mix.scripts([
+        '_admin.js'
+    ], 'public/js/admin.js');
 
     mix.scripts([
         '_lightbulb.js'

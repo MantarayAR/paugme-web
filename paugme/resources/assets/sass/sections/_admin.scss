@@ -1,0 +1,38 @@
+
+/**
+ * Toolbar
+ */
+.admin__toolbar {
+  @include clearfix;
+
+  background-color: $color-gallery;
+  border-radius: $border-radius;
+  display: inline-block;
+  margin: $measure-large 0;
+  padding: $measure-normal;
+  width: auto;
+}
+
+.admin__toolbar__button {
+  background-color: $color-white;
+  border-radius: $border-radius;
+  display: inline-block;
+  font-family: $font-sans-serif;
+  float: left;
+  padding: $measure-normal;
+  text-decoration: none;
+
+  & + & {
+    margin-left: $measure-normal;
+  }
+}
+
+/*
+ * Tags
+ */
+.admin__tag__content {
+}
+
+.admin__tags {
+
+}

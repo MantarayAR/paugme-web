@@ -1,0 +1,31 @@
+table {
+  max-width: 100%;
+  width: 100%;
+
+  &.table-bordered {
+    border: 1px solid $color-black;
+
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: 1px solid $color-black;
+        }
+      }
+    }
+    > thead > tr {
+      > th,
+      > td {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+
+  &.table-striped {
+    > tbody > tr:nth-of-type(odd) {
+      background-color: $color-gallery;
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 input[type=text],
 input[type=email],
+input[type=password],
 textarea {
   border: 1px solid $color-gallery;
   border-radius: $border-radius;
@@ -31,11 +32,40 @@ label {
 }
 
 .input-group {
+  margin-bottom: $measure-large;
+
+  label {
+    display: inline-block;
+    margin-right: $measure-normal;
+    margin-top: $measure-large;
+    text-align: right;
+    vertical-align: top;
+    width: 125px;
+  }
+
+  input,
+  textarea {
+    margin-top: 0;
+  }
+
   input {
     width: auto;
   }
 
   input[type=text] {
     text-align: left;
+  }
+
+  textarea {
+    display: inline-block;
+    width: auto;
+  }
+
+  &.multiline {
+    label {
+      display: block;
+      text-align: left;
+      width: auto;
+    }
   }
 }

@@ -1,0 +1,19 @@
+.pager {
+  @include clearfix;
+
+  display: block;
+
+  li.previous {
+    display: inline-block;
+    float: left;
+  }
+
+  li.next {
+    display: inline-block;
+    float: right;
+  }
+
+  li {
+    text-align: center;
+  }
+}

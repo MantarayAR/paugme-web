@@ -11,6 +11,10 @@
   [class^="column"]#{$name},
   [class*=" column"]#{$name} {
     width: ( $stretch_columns * $column_space ) + ( $stretch_gutters * $gutter_space );
+
+    .row-same-height > & {
+      width: $percentage_width * 100%;
+    }
   }
 
   @media(max-width: $screen-md-max) {

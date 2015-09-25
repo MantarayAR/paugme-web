@@ -201,6 +201,10 @@ img {
 // Hidden
 //
 // Styleguide 2.6
+.hidden {
+  display: none !important;
+}
+
 .hidden-xs {
   @media(max-width: $screen-xs-max) {
     display: none !important;
@@ -257,5 +261,18 @@ a {
 
   &.no-decoration {
     text-decoration: none;
+  }
+}
+
+// Horizontal Rules
+//
+// Styleguide 2.8
+hr {
+
+  &.small {
+    border-color: $color-white;
+    border-style: solid;
+    border-width: $measure-thin;
+    max-width: 5 * $measure-xlarge;
   }
 }

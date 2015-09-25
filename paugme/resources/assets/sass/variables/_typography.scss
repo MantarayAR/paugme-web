@@ -2,7 +2,7 @@
 //
 // Styleguide 1.2
 
-$font-serif:            serif;
+$font-serif:            'Roboto Slab', serif;
 $font-sans-serif:       'Open Sans', sans-serif;
 $font-sans-alternative: 'Roboto', sans-serif;
 
@@ -26,3 +26,9 @@ $font-weight-medium: 400;
 $font-weight-light:  300;
 // Only usable with $font-sans-alternative;
 $font-weight-feather:  100;
+
+@mixin readable() {
+  font-size: 100%;
+  line-height: $line-height-large;
+  font-family: $font-serif;
+}

@@ -1,0 +1,18 @@
+.intro-header {
+  min-height: 20vh;
+  margin-bottom: 5vh;
+  max-height: 80vh;
+  padding: $measure-xlarge;
+  width: 100%;
+
+  h1 {
+    color: $color-white;
+    text-align: center;
+  }
+
+  h2 {
+    color: $color-white;
+    text-align: center;
+  }
+}
+

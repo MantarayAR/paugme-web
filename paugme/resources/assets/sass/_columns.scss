@@ -4,8 +4,8 @@
 
 $number_of_columns: 12;
 $number_of_gutters: $number_of_columns - 1;
-$gutter_space: 3%;
-$column_space: (100 - $gutter_space * $number_of_gutters) / $number_of_columns;
+$gutter_space: 3.0%;
+$column_space: (100.0 - $gutter_space * $number_of_gutters) / $number_of_columns;
 
 .row,
 .row-fluid {
@@ -30,6 +30,8 @@ $column_space: (100 - $gutter_space * $number_of_gutters) / $number_of_columns;
   }
 }
 
-@include column('.one-third', .33);
-@include column('.two-thirds', .66);
+@include column('.one-quarter', .25);
+@include column('.one-third', .333333333);
 @include column('.one-half', .5);
+@include column('.two-thirds', .6666666667);
+@include column('.three-quarters', .75);

@@ -9,8 +9,13 @@
 // Components
 @import 'buttons';
 @import 'forms';
-@import 'panels';
+@import 'header';
 @import 'list-groups';
+@import 'modal';
+@import 'navigation';
+@import 'pagination';
+@import 'panels';
+@import 'tables';
 
 // BEM
 @import 'sections/home';
@@ -18,3 +23,4 @@
 @import 'sections/share';
 @import 'sections/footer';
 @import 'sections/header';
+@import 'sections/blog';

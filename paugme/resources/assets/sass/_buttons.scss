@@ -23,9 +23,11 @@
   
   &:hover,
   &:active,
+  &:focus,
   &.active {
     background-color: darken($color-lochmara, 5%);
     border-color: darken($color-lochmara, 5%);
+    color: $color-text-on-blue;
   }
 }
 
@@ -40,9 +42,26 @@ a.button {
 
   &:hover,
   &:active,
+  &:focus,
   &.active {
     background-color: darken($color-yellow, 2%);
     border-color: darken($color-yellow, 2%);
+    color: $color-text-on-yellow;
+  }
+}
+
+.button-danger {
+  color: $color-text-on-red;
+  border-color: $color-red;
+  background-color: $color-red;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background-color: darken($color-red, 2%);
+    border-color: darken($color-red, 2%);
+    color: $color-text-on-red;
   }
 }
 
@@ -58,6 +77,11 @@ a.button {
   font-weight: $font-weight-light;
   line-height: $line-height-large;
   padding: (4 * $measure-large) (6 * $measure-large);
+}
+
+.button-block {
+  text-align: center;
+  width: 100%;
 }
 
 // Social Buttons for Bootstrap
