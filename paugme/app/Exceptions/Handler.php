@@ -42,9 +42,9 @@ class Handler extends ExceptionHandler
     {
         $debug = config('app.debug', false);
 
-//        if ( $debug) {
-//            return (new SymfonyDisplayer($debug))->createResponse($e);
-//        }
+        if ( $debug) {
+            return (new SymfonyDisplayer($debug))->createResponse($e);
+        }
         AnalyticsFacade::trackEvent('error', get_class( $e ) . '@' . $e->getMessage());
         return response()->view('errors.default', ['exception' => $e], 500);
     }

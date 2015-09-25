@@ -20,8 +20,6 @@ class SlugHelper
 
         $slugCount = count($currentModels);
 
-        //$slugCount = count($model->whereRaw("slug REGEXP '^{$slug}(-[0-9]+)?$' and id != '{$model->id}'")->get());
-
         return ($slugCount > 0) ? "{$slug}-{$slugCount}" : $slug;
     }
 }
