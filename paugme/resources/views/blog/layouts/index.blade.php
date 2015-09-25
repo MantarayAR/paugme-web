@@ -6,8 +6,7 @@
 
 @section('content')
     @if( $page_image )
-        <header class="intro-header"
-                style="background-image: url('{{ HtmlHelper::page_image($page_image) }}')">
+        <header class="intro-header" style="background-image: url('{{ HtmlHelper::page_image($page_image) }}')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -22,34 +21,43 @@
         </header>
     @endif
     <div class="blog__content">
-        <h1>{{ config('blog.title') }}</h1>
-        <div class="blog__content__page">
-            Page {{ $posts->currentPage() }} of {{ $posts->count() }}
-        </div>
-        <hr>
         <div class="blog__posts">
             @foreach ($posts as $post)
                 <div class="blog__post">
-                    <div class="author__card">
-                        <div><a href="/blog/author/{{ $post->author->slug }}">{{ $post->author->name }}</a></div>
-                        <span class="blog__post__date">{{ $post->published_at->format('M jS Y g:ia') }}</span>
-                    </div>
                     <h2><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h2>
+
+                    <div class="blog__post__meta">
+                        <span class="blog__post__date">
+                            Posted {{ $post->published_at->format('M jS Y g:ia') }}
+                        </span>
+                        <span class="blog__post__tags">
+                            @if ($post->tags->count())
+                                in
+                                {!! join(', ', $post->tagLinks()) !!}
+                            @endif
+                        </span>
+                    </div>
 
                     <div class="blog__post__content">
                         {!! PostRenderer::render( $post, [ 'truncate' => true ] ) !!}
-
-                        <p class="post-meta">
-                            @if ($post->tags->count())
-                                Tags
-                                {!! join(', ', $post->tagLinks()) !!}
-                            @endif
-                        </p>
                     </div>
 
-                    <div class="blog__post__read-more">
-                        <a href="/blog/{{$post->slug}}">Read More</a>
-                        <span class="blog__post__time">{{$post->timeToRead()}}</span>
+                    <div class="blog__post__footer">
+                        <div class="author__card">
+                            <div class="author__card__image">
+                                {!! Gravatar::image( $post->author->email) !!}
+                            </div>
+                            <div><a href="/blog/author/{{ $post->author->slug }}">{{ $post->author->name }}</a></div>
+                        </div>
+                        <div class="blog__post__read-more">
+                            <div class="blog__post__read-more__link">
+                                <a href="/blog/{{$post->slug}}">Read More</a>
+                            </div>
+                            <span class="blog__post__read-more__time">
+                                <i class="fa fa-clock-o"></i>
+                                {{$post->timeToRead()}}
+                            </span>
+                        </div>
                     </div>
                 </div>
             @endforeach
@@ -57,7 +65,6 @@
         <hr>
         {{-- The Pager --}}
         <ul class="pager">
-
             {{-- Reverse direction --}}
             @if ($reverse_direction)
                 @if ($posts->currentPage() > 1)
@@ -85,6 +92,7 @@
                         </a>
                     </li>
                 @endif
+
                 @if ($posts->hasMorePages())
                     <li class="next">
                         <a href="{!! $posts->nextPageUrl() !!}">
@@ -94,6 +102,7 @@
                     </li>
                 @endif
             @endif
+            <li>Page {{ $posts->currentPage() }} of {{ $posts->count() }}</li>
         </ul>
     </div>
 @stop

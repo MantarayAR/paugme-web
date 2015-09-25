@@ -76,7 +76,7 @@ class BlogIndexDataCommand extends Command implements SelfHandling
             ->simplePaginate(config('blog.posts_per_page'));
         $posts->addQuery('tag', $tag->tag);
 
-        $page_image = $tag->page_image ?: config('blog.page_image');
+        $page_image = $tag->page_image ? : config('blog.page_image');
 
         return [
             'title' => $tag->title,

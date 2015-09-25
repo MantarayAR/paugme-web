@@ -26,10 +26,15 @@
   }
 }
 
-.blog__post__date {
+.blog__post__meta {
   font-family: $font-sans-alternative;
   font-size: $font-size-small;
   font-weight: $font-weight-light;
+}
+
+
+.blog__post__read-more {
+  @include readable;
 }
 
 .blog__post__content {
@@ -37,10 +42,36 @@
   font-size: $font-size-medium;
   font-weight: $font-weight-light;
   line-height: $line-height-large;
-  margin-top: $measure-xlarge;
+  margin: $measure-xlarge 0;
 
 
   p {
     @include readable;
+  }
+}
+
+.blog__post__footer {
+  @include clearfix;
+
+}
+
+.author__card {
+  @include clearfix;
+
+  background-color: $color-gallery;
+  float: right;
+  padding: $measure-large;
+  width: 150px;
+}
+
+.author__card__image {
+  float: left;
+  margin-right: $measure-large;
+
+  img {
+    border: $measure-thin solid $color-white;
+    border-radius: 50%;
+    max-height: 40px;
+    max-width: 40px;
   }
 }

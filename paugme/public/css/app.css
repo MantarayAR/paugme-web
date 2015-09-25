@@ -215,6 +215,12 @@ a {
   a.no-decoration {
     text-decoration: none; }
 
+hr.small {
+  border-color: #fff;
+  border-style: solid;
+  border-width: 3px;
+  max-width: 150px; }
+
 .row,
 .row-fluid {
   zoom: 1; }
@@ -1842,6 +1848,19 @@ label {
     text-align: left;
     width: auto; }
 
+.intro-header {
+  min-height: 20vh;
+  margin-bottom: 5vh;
+  max-height: 80vh;
+  padding: 30px;
+  width: 100%; }
+  .intro-header h1 {
+    color: #fff;
+    text-align: center; }
+  .intro-header h2 {
+    color: #fff;
+    text-align: center; }
+
 .list-group {
   background-color: #fff;
   display: block;
@@ -1900,6 +1919,25 @@ label {
       background-color: #efefef; }
   .sidebar-nav li + li {
     border-top: 1px solid #333; }
+
+.pager {
+  zoom: 1;
+  display: block; }
+  .pager:before, .pager:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .pager:after {
+    clear: both; }
+  .pager li.previous {
+    display: inline-block;
+    float: left; }
+  .pager li.next {
+    display: inline-block;
+    float: right; }
+  .pager li {
+    text-align: center; }
 
 .panel, #mc_embed_signup {
   width: 50%;
@@ -2362,21 +2400,59 @@ footer {
   .blog__post + .blog__post {
     border-top: 1px solid #efefef; }
 
-.blog__post__date {
+.blog__post__meta {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300; }
+
+.blog__post__read-more {
+  font-size: 100%;
+  line-height: 1.44;
+  font-family: "Roboto Slab", serif; }
 
 .blog__post__content {
   font-family: "Roboto Slab", serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.44;
-  margin-top: 30px; }
+  margin: 30px 0; }
   .blog__post__content p {
     font-size: 100%;
     line-height: 1.44;
     font-family: "Roboto Slab", serif; }
+
+.blog__post__footer {
+  zoom: 1; }
+  .blog__post__footer:before, .blog__post__footer:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .blog__post__footer:after {
+    clear: both; }
+
+.author__card {
+  zoom: 1;
+  background-color: #efefef;
+  float: right;
+  padding: 9px;
+  width: 150px; }
+  .author__card:before, .author__card:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .author__card:after {
+    clear: both; }
+
+.author__card__image {
+  float: left;
+  margin-right: 9px; }
+  .author__card__image img {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    max-height: 40px;
+    max-width: 40px; }
 
 /**
  * Toolbar

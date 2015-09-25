@@ -6,10 +6,8 @@ use App\Commands\BlogIndexDataCommand;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Post;
 use App\Tag;
-use Carbon\Carbon;
 
 class BlogController extends Controller
 {
