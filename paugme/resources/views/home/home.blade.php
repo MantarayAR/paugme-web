@@ -23,24 +23,31 @@
 
         <div class="home__about">
             <p>Pre-orders open up in January!</p>
+
             <p>The Circuit Pack ships in May!</p>
         </div>
 
         <div class="home__packages">
             <p>Paugme Packs deliver new educational kits to you once a month!</p>
+
             <p>Get all of the following packs!</p>
 
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/circuits-home-icon.png"/>
+                        <div class="image">
+                            <img class="img-responsive"
+                                 src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/circuits-home-icon.png"/>
+                        </div>
                     </div>
                     <div class="column two-thirds">
                         <h2>Circuits</h2>
+
                         <p>
                             Learn circuits, logic, and how to make
                             a motion sensor device!
                         </p>
+
                         <p>
                             Includes:
                         </p>
@@ -56,13 +63,18 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/dna-home-icon.png">
+                        <div class="image">
+                            <img class="img-responsive"
+                                 src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/dna-home-icon.png">
+                        </div>
                     </div>
                     <div class="column two-thirds">
                         <h2>Biology</h2>
+
                         <p>
                             Discover cells, viruses, and the microscopic world!
                         </p>
+
                         <p>
                             Includes:
                         </p>
@@ -77,7 +89,10 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/chemistry-home-icon.png"/>
+                        <div class="image">
+                            <img class="img-responsive"
+                                 src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/chemistry-home-icon.png"/>
+                        </div>
                     </div>
                     <div class="column two-thirds">
                         <h2>Chemistry</h2>
@@ -85,6 +100,7 @@
                         <p>
                             Learn about the building blocks of all matter!
                         </p>
+
                         <p>
                             Includes:
                         </p>
@@ -99,7 +115,10 @@
             <div class="home__packages_pack">
                 <div class="row-fluid">
                     <div class="column one-third">
-                        <img class="img-responsive" src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/code-home-icon.png"/>
+                        <div class="image">
+                            <img class="img-responsive"
+                                 src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/code-home-icon.png"/>
+                        </div>
                     </div>
                     <div class="column two-thirds">
                         <h2>Programming</h2>
@@ -107,6 +126,7 @@
                         <p>
                             Piece together games and other software!
                         </p>
+
                         <p>
                             Includes:
                         </p>
@@ -141,7 +161,7 @@
             <div class="home__circuit row row-same-height">
                 <div class="home__circuit_circuit_text column-xs two-thirds">
                     <p>Learn about logic gates and how to store data. We even provide
-                    additional activities, like how to build motion sensing circuits.</p>
+                        additional activities, like how to build motion sensing circuits.</p>
                 </div>
                 <div class="home__circuit_circuit column-xs one-third hidden-xs">
                     <!-- Circuit -->
@@ -164,42 +184,48 @@
 
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/cells-home-icon.png" />
+                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/cells-home-icon.png"/>
 
                     <h3>Cells</h3>
+
                     <p>Learn about animal cells and plant cells
                         and how they differ from each other</p>
                 </div>
                 <div class="column-xs one-half">
-                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/food-chain-icon.png" />
+                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/food-chain-icon.png"/>
 
                     <h3>Ecology</h3>
+
                     <p>Find out how organisms are related to one another</p>
                 </div>
             </div>
             <div class="row">
                 <div class="column-xs one-half">
-                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/plants-home-icon.png" />
+                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/plants-home-icon.png"/>
 
                     <h3>Plants</h3>
+
                     <p>Find out what makes a plant a plant and how photosynthesis works</p>
                 </div>
                 <div class="column-xs one-half">
-                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/virus-bacteria-icon.png" />
+                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/virus-bacteria-icon.png"/>
 
 
                     <h3>Viruses and Bacteria</h3>
+
                     <p>Investigate illnesses and what causes them!</p>
                 </div>
             </div>
         </div>
         <div class="home__rest">
             <h2>Coming Soon!</h2>
+
             <div class="row">
                 <div class="column-xs one-half">
                     <h3>Chemistry</h3>
 
-                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/beaker-100x100.png" class="home__rest_icon"/>
+                    <img src="https://cdn.rawgit.com/MantarayAR/paugme-static/0.1.0/images/icons/beaker-100x100.png"
+                         class="home__rest_icon"/>
 
                 </div>
                 <div class="column-xs one-half">

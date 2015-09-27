@@ -2072,8 +2072,8 @@ table {
   @media (max-width: 767px) {
     .home__packages_pack {
       width: 90%; } }
-  .home__packages_pack img {
-    margin-right: 30px; }
+  .home__packages_pack .image {
+    margin: 30px; }
   .home__packages_pack p {
     font-size: 19px; }
 
