@@ -12,7 +12,7 @@
             @include('admin.partials.errors')
             @include('admin.partials.success')
 
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered" data-type="dataTable">
                 <thead>
                 <tr>
                     <th>Tag</th>
@@ -43,11 +43,11 @@
                         </td>
                         <td>
                             <a href="/admin/tag/{{ $tag->id }}/edit"
-                               class="btn btn-xs btn-info">
+                               class="button">
                                 <i class="fa fa-edit"></i> Edit
                             </a>
                             <a href="/admin/tag/{{ $tag->id }}/delete"
-                               class="btn btn-xs btn-info">
+                               class="button">
                                 <i class="fa fa-trash"></i> Delete
                             </a>
                         </td>

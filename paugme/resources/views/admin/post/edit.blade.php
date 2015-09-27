@@ -24,10 +24,7 @@
 
 @section('scripts')
     <script>
-        // TODO data pickers
-
+        // TODO enable data pickers
         window.postId = '{{$post['id']}}';
     </script>
-
-    <script src="/js/admin.js"></script>
 @stop

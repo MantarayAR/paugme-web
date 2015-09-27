@@ -1,7 +1,20 @@
+// Admin
+//
+// Stylesheet 9
+.admin {
+  .admin__sidebar {
+    border-right: 1px solid $color-black;
+    margin-right: $measure-large;
+  }
 
-/**
- * Toolbar
- */
+  .admin__content {
+    padding: $measure-large;
+  }
+}
+
+// Toolbar
+//
+// Stylesheet 9.1
 .admin__toolbar {
   @include clearfix;
 
@@ -25,14 +38,4 @@
   & + & {
     margin-left: $measure-normal;
   }
-}
-
-/*
- * Tags
- */
-.admin__tag__content {
-}
-
-.admin__tags {
-
 }

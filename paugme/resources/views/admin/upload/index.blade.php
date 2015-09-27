@@ -23,7 +23,7 @@
             @include('admin.partials.errors')
             @include('admin.partials.success')
 
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered" data-type="dataTable">
                 <thead>
                 <tr>
                     <th>Name</th>

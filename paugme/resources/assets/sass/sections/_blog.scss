@@ -27,9 +27,14 @@
 }
 
 .blog__post__meta {
+  color: $color-dove-gray;
   font-family: $font-sans-alternative;
   font-size: $font-size-small;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-medium;
+
+  a {
+    color: $color-dove-gray;
+  }
 }
 
 

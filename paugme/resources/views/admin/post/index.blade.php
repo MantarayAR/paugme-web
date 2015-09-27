@@ -13,7 +13,7 @@
             @include('admin.partials.errors')
             @include('admin.partials.success')
 
-            <table id="posts-table" class="table table-striped table-bordered">
+            <table id="posts-table" class="table table-striped table-bordered" data-type="dataTable">
                 <thead>
                 <tr>
                     <th>Published</th>

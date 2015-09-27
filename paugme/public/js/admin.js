@@ -1,7 +1,9 @@
+/**
+ * Admin Modals
+ *
+ * Display Delete Modal
+ */
 +jQuery(function ($) {
-    /**
-     * Display Delete Modal
-     */
     $('[data-action=showDeleteModal]').click(function (e) {
         e.preventDefault();
 
@@ -16,4 +18,13 @@
             $('[data-show=showDeleteButton]').hide();
         }
     }();
+});
+
+/**
+ * Data Tables
+ *
+ * Setup datatables for any tables in the admin panel
+ */
++jQuery(function ($) {
+    $('[data-type=dataTable]').DataTable();
 });

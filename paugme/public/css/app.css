@@ -39,6 +39,11 @@ table {
   box-sizing: border-box; }
 
 body {
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.44;
   margin-top: 50px; }
 
 .inverse, .home__welcome_panel *, .home__circuits h2, .home__circuit_light_text p,
@@ -67,7 +72,7 @@ p {
   color: #333;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 1.44; }
   p.inverse, .home__welcome_panel p, .home__circuit_light_text p,
   .home__circuit_circuit_text p,
@@ -76,6 +81,10 @@ p {
 
 p + p {
   margin-top: 18px; }
+
+strong,
+b {
+  font-weight: 700; }
 
 h1,
 .h1,
@@ -1848,6 +1857,23 @@ label {
     text-align: left;
     width: auto; }
 
+.alert {
+  margin-bottom: 9px; }
+
+.alert-danger {
+  background-color: #fef7f7;
+  border-left: 6px solid #911;
+  padding: 9px; }
+  .alert-danger li:before {
+    content: "\f06a";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    margin-right: 6px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
 .intro-header {
   min-height: 20vh;
   margin-bottom: 5vh;
@@ -1900,25 +1926,22 @@ label {
     padding: 10px;
     border-top: 1px solid #efefef; }
 
-.sidebar-nav {
-  border: 2px solid #333;
-  display: inline-block;
-  margin: 9px; }
-  .sidebar-nav li {
-    display: block; }
-    .sidebar-nav li a {
-      display: block;
-      padding: 9px 30px;
-      text-decoration: none;
-      transition: all 0.2s; }
-      .sidebar-nav li a:hover,
-      .sidebar-nav li a:active,
-      .sidebar-nav li a.active {
-        background-color: #efefef; }
-    .sidebar-nav li.active a {
+.sidebar-nav li {
+  display: block; }
+  .sidebar-nav li a {
+    display: block;
+    padding: 9px 30px;
+    text-decoration: none;
+    transition: all 0.2s; }
+    .sidebar-nav li a:hover,
+    .sidebar-nav li a:active,
+    .sidebar-nav li a.active {
       background-color: #efefef; }
-  .sidebar-nav li + li {
-    border-top: 1px solid #333; }
+  .sidebar-nav li.active a {
+    background-color: #efefef; }
+
+.sidebar-nav li + li {
+  border-top: 1px solid #333; }
 
 .pager {
   zoom: 1;
@@ -2316,6 +2339,7 @@ footer {
   cursor: pointer;
   float: left;
   font-size: 32px;
+  line-height: 1;
   margin-left: 9px;
   margin-right: -9px;
   margin-top: 3px;
@@ -2401,9 +2425,12 @@ footer {
     border-top: 1px solid #efefef; }
 
 .blog__post__meta {
+  color: #666;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 400; }
+  .blog__post__meta a {
+    color: #666; }
 
 .blog__post__read-more {
   font-size: 100%;
@@ -2454,9 +2481,13 @@ footer {
     max-height: 40px;
     max-width: 40px; }
 
-/**
- * Toolbar
- */
+.admin .admin__sidebar {
+  border-right: 1px solid #333;
+  margin-right: 9px; }
+
+.admin .admin__content {
+  padding: 9px; }
+
 .admin__toolbar {
   zoom: 1;
   background-color: #efefef;
@@ -2483,7 +2514,3 @@ footer {
   text-decoration: none; }
   .admin__toolbar__button + .admin__toolbar__button {
     margin-left: 6px; }
-
-/*
- * Tags
- */

@@ -69,3 +69,28 @@ label {
     }
   }
 }
+
+// Errors
+//
+// Styleguide 5.2
+.alert {
+  margin-bottom: $measure-large;
+
+}
+
+.alert-danger {
+  background-color: lighten( $color-red, 65 );
+  border-left: $measure-normal solid $color-red;
+  padding: $measure-large;
+
+  li:before {
+    content: "\f06a";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    margin-right: $measure-normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

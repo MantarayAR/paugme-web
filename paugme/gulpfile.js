@@ -1,6 +1,6 @@
-var elixir = require('laravel-elixir');
-var gulp = require('gulp');
-var rename = require('gulp-rename');
+var elixir    = require('laravel-elixir');
+var gulp      = require('gulp');
+var rename    = require('gulp-rename');
 var inlineCss = require('gulp-inline-css');
 
 /*
@@ -20,9 +20,18 @@ elixir.config.sourcemaps = false;
 var email_view_path = 'resources/views/emails/*.hbs';
 var email_css_path  = 'public/css/email.css';
 
+/*
+ |
+ |--------------------------------------------------------------------------
+ | Email Pipeline
+ |--------------------------------------------------------------------------
+ |
+ | The email pipeline consists of taking email templates and converting them
+ | into send-able static assets.
+ |
+ */
 elixir.extend('emails', function () {
     gulp.task('compile-emails', function () {
-
         return gulp.src(email_view_path)
             .pipe(inlineCss())
             .pipe(rename(function (path) {
@@ -36,7 +45,6 @@ elixir.extend('emails', function () {
         email_view_path,
         'resources/assets/sass/**/*.scss'
     ]);
-    // TODO also watch the sass path
     return this.queueTask('compile-emails');
 });
 
@@ -63,5 +71,6 @@ elixir(function(mix) {
     mix.scripts([
         '_all.js'
     ], 'public/js/all.js');
+
 });
 
